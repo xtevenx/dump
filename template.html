@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css"
-        integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+        integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous" />
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"
         integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd"
         crossorigin="anonymous"></script>
@@ -22,12 +22,12 @@
             const elements = document.querySelectorAll('.math');
             const observer = new IntersectionObserver(handleIntersection);
 
-            elements.forEach(obs => {
+            elements.forEach((obs) => {
                 observer.observe(obs);
             });
 
             function handleIntersection(entries, observer) {
-                entries.forEach(entry => {
+                entries.forEach((entry) => {
                     if (entry.intersectionRatio > 0) {
                         katex.render(entry.target.textContent, entry.target);
                         observer.unobserve(entry.target);
@@ -42,9 +42,12 @@
     <table>
         {% for item in list %}
         <tr>
-            <td style="text-align:center"><img src="{{ item.fname }}" loading="lazy" /></td>
-            <td style="vertical-align:middle">
-                Characteristic polynomial: <span class="math inline">{{ item.charpoly }}</span><br>
+            <td style="text-align: center">
+                <img src="{{ item.fname }}" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">{{ item.charpoly }}</span><br />
                 Spectrum: <span class="math inline">{{ item.spec }}</span>
             </td>
         </tr>
