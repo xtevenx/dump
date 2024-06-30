@@ -62,7 +62,7 @@ if __name__ == '__main__':
 
     FNAME = Path(__file__).stem
 
-    makedirs(FNAME)
+    makedirs(FNAME, exist_ok=True)
 
     data = save(FNAME, order=5)
 

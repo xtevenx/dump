@@ -24,7 +24,7 @@ def save(location: str, order: int, oriented_only: bool = False) -> list:
     for graph in enumerate_graphs(order):
         G = DiGraph(graph)
 
-        if G.is_bipartite():
+        if not G.is_connected():
             continue
 
         if oriented_only:
@@ -60,7 +60,7 @@ if __name__ == '__main__':
 
     FNAME = Path(__file__).stem
 
-    makedirs(FNAME)
+    makedirs(FNAME, exist_ok=True)
 
     data = save(FNAME, order=5)
 
