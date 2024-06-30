@@ -1,3 +1,5 @@
+from os import makedirs
+
 from sage.all import *
 
 from utils import enumerate_graphs
@@ -59,6 +61,8 @@ if __name__ == '__main__':
     from pathlib import Path
 
     FNAME = Path(__file__).stem
+
+    makedirs(FNAME)
 
     data = save(FNAME, order=5)
 
