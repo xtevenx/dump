@@ -16,7 +16,8 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // copy https://stackoverflow.com/a/57273404
+            // Copied from stekhn https://stackoverflow.com/a/57273404
+            // using license CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
 
             const elements = document.querySelectorAll('.math');
             const observer = new IntersectionObserver(handleIntersection);
@@ -33,12 +34,6 @@
                     }
                 });
             }
-
-
-            // var math = document.getElementsByClassName('math');
-            // for (var i = 0; i < math.length; i++) {
-            //     katex.render(math[i].textContent, math[i]);
-            // }
         });
     </script>
 </head>

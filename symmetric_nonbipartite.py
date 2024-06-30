@@ -156,8 +156,8 @@ def save(location: str, order: int, oriented_only: bool = False) -> list:
         P = M.charpoly()
 
         if is_symmetric(P):
-            fname = f"{location}/graph{len(info):03}.png"
-            print(f"Saving image {fname}.")
+            fname = f'{location}/graph{len(info):03}.png'
+            print(f'Saving image {fname}.')
             G.plot(layout='spring', iterations=9001).save(fname)
 
             try:
@@ -165,23 +165,28 @@ def save(location: str, order: int, oriented_only: bool = False) -> list:
                 solutions = [(s.right_hand_side(), m) for s, m in zip(*solutions)]
                 solutions.sort(key=lambda t: t[0])
             except NotImplementedError:
-                solutions = "Unknown"
+                solutions = 'Unknown'
 
-            info.append({"fname": fname, "charpoly": latex(P), "spec": latex(solutions)})
+            info.append({'fname': fname, 'charpoly': latex(P), 'spec': latex(solutions)})
 
     return info
 
 
+from pathlib import Path
+
+FNAME = Path(__file__).stem
+
+
 def generate() -> list:
-    return save("symmetric_nonbipartite", order=5)
+    return save(FNAME, order=5)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     # jinja2 docs: https://jinja.palletsprojects.com/en/3.0.x/templates/
 
     import jinja2
 
-    with open('symmetric_nonbipartite.template') as fp:
+    with open(f'{FNAME}.template') as fp:
         html = jinja2.Template(fp.read()).render(list=generate())
-        with open('symmetric_nonbipartite.html', 'w') as fp:
+        with open(f'{FNAME}.html', 'w') as fp:
             fp.write(html)
