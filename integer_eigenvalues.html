@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css"
+        integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous" />
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"
+        integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"
+        integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Copied from stekhn https://stackoverflow.com/a/57273404
+            // using license CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
+
+            const elements = document.querySelectorAll('.math');
+            const observer = new IntersectionObserver(handleIntersection);
+
+            elements.forEach((obs) => {
+                observer.observe(obs);
+            });
+
+            function handleIntersection(entries, observer) {
+                entries.forEach((entry) => {
+                    if (entry.intersectionRatio > 0) {
+                        katex.render(entry.target.textContent, entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <table>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph000.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">1</span><br />
+                Spectrum: <span class="math inline">\left[\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph001.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{2} - 1</span><br />
+                Spectrum: <span class="math inline">\left[\left(-1, 1\right), \left(1, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph002.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 4 x^{3}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 3\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph003.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{2} - 1</span><br />
+                Spectrum: <span class="math inline">\left[\left(-1, 1\right), \left(1, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph004.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 4 x^{3}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 3\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph005.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 4 x^{3}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 3\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph006.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 4 x^{3}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 3\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph007.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{3} - 3 x + 2</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(1, 2\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph008.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 7 x^{3} - 6 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(0, 2\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph009.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{3} - 3 x - 2</span><br />
+                Spectrum: <span class="math inline">\left[\left(-1, 2\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph010.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{3} - 3 x - 2</span><br />
+                Spectrum: <span class="math inline">\left[\left(-1, 2\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph011.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{3} - 3 x - 2</span><br />
+                Spectrum: <span class="math inline">\left[\left(-1, 2\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph012.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 4 x^{3}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 3\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph013.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 7 x^{3} - 6 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(0, 2\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph014.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 4 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 2\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph015.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 4 x^{3}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 3\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph016.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 4 x^{3}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 3\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph017.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 7 x^{3} - 6 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(0, 2\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph018.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 4 x^{3}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 3\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph019.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 4 x^{3}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 3\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph020.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 4 x^{3}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 3\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph021.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 7 x^{3} - 6 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(0, 2\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph022.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 4 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 2\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph023.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 5 x^{2} + 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph024.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 5 x^{2} + 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph025.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 4 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 2\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph026.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 5 x^{2} + 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph027.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} - 6 x^{2} + 7 x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 2\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph028.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 5 x^{2} + 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph029.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 5 x^{2} + 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph030.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 6 x^{2} - 8 x - 3</span><br />
+                Spectrum: <span class="math inline">\left[\left(-1, 3\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph031.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 6 x^{2} - 8 x - 3</span><br />
+                Spectrum: <span class="math inline">\left[\left(-1, 3\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph032.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 4 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 2\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph033.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 4 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 2\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph034.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 4 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 2\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph035.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 5 x^{2} + 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph036.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 6 x^{2} - 8 x - 3</span><br />
+                Spectrum: <span class="math inline">\left[\left(-1, 3\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph037.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 6 x^{2} - 8 x - 3</span><br />
+                Spectrum: <span class="math inline">\left[\left(-1, 3\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph038.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 9 x^{3} - 4 x^{2} + 12 x</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 2\right), \left(0, 1\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph039.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 7 x^{3} - 6 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(0, 2\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph040.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 4 x^{3}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 3\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph041.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} + 16 x</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 2\right), \left(0, 1\right), \left(2, 2\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph042.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} - 6 x^{2} + 7 x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 2\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph043.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} - 6 x^{2} + 7 x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 2\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph044.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 4 x^{3}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 3\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph045.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} - 6 x^{2} + 7 x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 2\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph046.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 7 x^{3} - 6 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(0, 2\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph047.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 7 x^{3} - 6 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(0, 2\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph048.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 9 x^{3} - 4 x^{2} + 12 x</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 2\right), \left(0, 1\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph049.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 9 x^{3} - 4 x^{2} + 12 x</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 2\right), \left(0, 1\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph050.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} - 6 x^{2} + 7 x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 2\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph051.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} - 6 x^{2} + 7 x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 2\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph052.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} - 6 x^{2} + 7 x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 2\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph053.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 7 x^{3} + 6 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-3, 1\right), \left(0, 2\right), \left(1, 1\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph054.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} + 6 x^{2} + 7 x - 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(-3, 1\right), \left(-1, 1\right), \left(1, 2\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph055.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 9 x^{3} - 4 x^{2} + 12 x</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 2\right), \left(0, 1\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph056.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 9 x^{3} - 4 x^{2} + 12 x</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 2\right), \left(0, 1\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph057.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} - 6 x^{2} + 7 x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 2\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph058.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} - 6 x^{2} + 7 x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 2\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph059.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 x^{3} - 20 x^{2} - 15 x - 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-1, 4\right), \left(4, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph060.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 x^{3} - 20 x^{2} - 15 x - 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-1, 4\right), \left(4, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph061.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 7 x^{3} - 6 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(0, 2\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph062.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 x^{3} - 20 x^{2} - 15 x - 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-1, 4\right), \left(4, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph063.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 7 x^{3} - 6 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(0, 2\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph064.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 4 x^{3}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 3\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph065.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 4 x^{3}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 3\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph066.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 4 x^{3}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(0, 3\right), \left(2, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph067.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 7 x^{3} - 6 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(0, 2\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph068.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 7 x^{3} - 6 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(0, 2\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph069.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 7 x^{3} - 6 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(0, 2\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph070.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} - 6 x^{2} + 7 x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 2\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph071.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} - 6 x^{2} + 7 x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 2\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph072.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 9 x^{3} - 4 x^{2} + 12 x</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 2\right), \left(0, 1\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph073.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 7 x^{3} - 6 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(0, 2\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph074.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 7 x^{3} - 6 x^{2}</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 1\right), \left(0, 2\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph075.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} - 6 x^{2} + 7 x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 2\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph076.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} - 6 x^{2} + 7 x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 2\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph077.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} - 6 x^{2} + 7 x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 2\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph078.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 x^{3} - 6 x^{2} + 7 x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(-1, 2\right), \left(1, 1\right), \left(3, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph079.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 x^{3} - 20 x^{2} - 15 x - 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-1, 4\right), \left(4, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="integer_eigenvalues/graph080.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 x^{3} - 20 x^{2} - 15 x - 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-1, 4\right), \left(4, 1\right)\right]</span>
+            </td>
+        </tr>
+        
+    </table>
+</body>
+
+</html>
