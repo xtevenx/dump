@@ -39,14 +39,15 @@ def save(location: str, order: int, oriented_only: bool = False) -> list:
         solutions = solve(SR(P), var('x'), multiplicities=True)
 
         if all(s.right_hand_side().is_integer() for s in solutions[0]):
-            fname = f'{location}/graph{len(info):03}.png'
+            id = len(info) + 1
+            fname = f'{location}/graph{id:03}.png'
             print(f'Saving image {fname}')
             G.plot(layout='spring', iterations=9001).save(fname)
 
             solutions = [(s.right_hand_side(), m) for s, m in zip(*solutions)]
             solutions.sort(key=lambda t: t[0])
 
-            info.append({'fname': fname, 'charpoly': latex(P), 'spec': latex(solutions)})
+            info.append({'fname': fname, 'id': id, 'charpoly': latex(P), 'spec': latex(solutions)})
 
     return info
 

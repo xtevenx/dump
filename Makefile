@@ -12,6 +12,7 @@ two_distinct_eigenvalues.html: two_distinct_eigenvalues.py template.html
 	python two_distinct_eigenvalues.py
 
 clean:
+	rm -r __pycache__ || true
 	rm -r integer_eigenvalues/ || true
 	rm -r symmetric_nonbipartite/ || true
 	rm -r two_distinct_eigenvalues/ || true

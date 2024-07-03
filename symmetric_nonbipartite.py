@@ -24,6 +24,9 @@ def save(location: str, order: int, oriented_only: bool = False) -> list:
     for graph in enumerate_graphs(order):
         G = DiGraph(graph)
 
+        if not G.is_connected():
+            continue
+
         if G.is_bipartite():
             continue
 
@@ -37,7 +40,8 @@ def save(location: str, order: int, oriented_only: bool = False) -> list:
         P = M.charpoly()
 
         if is_symmetric(P):
-            fname = f'{location}/graph{len(info):03}.png'
+            id = len(info) + 1
+            fname = f'{location}/graph{id:03}.png'
             print(f'Saving image {fname}')
             G.plot(layout='spring', iterations=9001).save(fname)
 
@@ -48,7 +52,7 @@ def save(location: str, order: int, oriented_only: bool = False) -> list:
             except NotImplementedError:
                 solutions = 'Unknown'
 
-            info.append({'fname': fname, 'charpoly': latex(P), 'spec': latex(solutions)})
+            info.append({'fname': fname, 'id': id, 'charpoly': latex(P), 'spec': latex(solutions)})
 
     return info
 
