@@ -1,0 +1,1121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css"
+        integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous" />
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"
+        integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"
+        integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Copied from stekhn https://stackoverflow.com/a/57273404
+            // using license CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
+
+            const elements = document.querySelectorAll('.math');
+            const observer = new IntersectionObserver(handleIntersection);
+
+            elements.forEach((obs) => {
+                observer.observe(obs);
+            });
+
+            function handleIntersection(entries, observer) {
+                entries.forEach((entry) => {
+                    if (entry.intersectionRatio > 0) {
+                        katex.render(entry.target.textContent, entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }
+        });
+    </script>
+
+    <style>
+        body {
+            font: 1.2rem KaTeX_Main;
+        }
+
+        .math {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph001.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #1</h4>
+                Characteristic polynomial:
+                <span class="math inline">1</span><br />
+                Spectrum: <span class="math inline">\left[\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~?</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph002.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #2</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{2} - 1</span><br />
+                Spectrum: <span class="math inline">\left[\left(-1, 1\right), \left(1, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~1.0</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph003.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #3</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{3} - 3 \, x + 2</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(1, 2\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~2.0</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph004.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #4</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{3} - 3 \, x - 1</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, {\left(i \, \sqrt{3} + 1\right)} {\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}} - \frac{-i \, \sqrt{3} + 1}{2 \, {\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}}}, 1\right), \left(-\frac{1}{2} \, {\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} - \frac{i \, \sqrt{3} + 1}{2 \, {\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}}}, 1\right), \left({\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}} + \frac{1}{{\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}}}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~1.8794</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph005.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #5</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 6 \, x^{2} - x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(1, 1\right), \left(-2, 1\right), \left(-\frac{1}{2} \, \sqrt{13} + \frac{1}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{13} + \frac{1}{2}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~2.3028</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph006.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #6</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 6 \, x^{2} + 2 \, x + 3</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, {\left(\frac{1}{3} i \, \sqrt{47} + \frac{17}{27}\right)}^{\frac{1}{3}} {\left(i \, \sqrt{3} + 1\right)} - \frac{8 \, {\left(-i \, \sqrt{3} + 1\right)}}{9 \, {\left(\frac{1}{3} i \, \sqrt{47} + \frac{17}{27}\right)}^{\frac{1}{3}}} - \frac{1}{3}, 1\right), \left(-\frac{1}{2} \, {\left(\frac{1}{3} i \, \sqrt{47} + \frac{17}{27}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} - \frac{8 \, {\left(i \, \sqrt{3} + 1\right)}}{9 \, {\left(\frac{1}{3} i \, \sqrt{47} + \frac{17}{27}\right)}^{\frac{1}{3}}} - \frac{1}{3}, 1\right), \left({\left(\frac{1}{3} i \, \sqrt{47} + \frac{17}{27}\right)}^{\frac{1}{3}} + \frac{16}{9 \, {\left(\frac{1}{3} i \, \sqrt{47} + \frac{17}{27}\right)}^{\frac{1}{3}}} - \frac{1}{3}, 1\right), \left(1, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~2.5141</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph007.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #7</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 6 \, x^{2} - 4 \, x</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\sqrt{3} + 1, 1\right), \left(\sqrt{3} + 1, 1\right), \left(-2, 1\right), \left(0, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~2.7321</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph008.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #8</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{4} - 6 \, x^{2} - x + 6</span><br />
+                Spectrum: <span class="math inline">\left[\left(1, 1\right), \left(-2, 1\right), \left(-\frac{1}{2} \, \sqrt{13} + \frac{1}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{13} + \frac{1}{2}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~2.3028</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph009.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #9</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 \, x^{3} - x^{2} + 18 \, x + 1</span><br />
+                Spectrum: <span class="math inline">\left[\left(x^{5} - 10 \, x^{3} - x^{2} + 18 \, x + 1, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~2.8427</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph010.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #10</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 \, x^{3} + 2 \, x^{2} + 21 \, x - 14</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\sqrt{7}, 1\right), \left(\sqrt{7}, 1\right), \left(-2, 1\right), \left(1, 2\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~2.6458</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph011.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #11</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 \, x^{3} - 7 \, x^{2} + 12 \, x + 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, \sqrt{13} + \frac{3}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{13} + \frac{3}{2}, 1\right), \left(1, 1\right), \left(-2, 2\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.3028</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph012.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #12</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 \, x^{3} - x^{2} + 9 \, x + 1</span><br />
+                Spectrum: <span class="math inline">\left[\left(1, 1\right), \left(-1, 1\right), \left(-\frac{1}{2} \, {\left(\frac{1}{2} i \, \sqrt{107} + \frac{1}{2}\right)}^{\frac{1}{3}} {\left(i \, \sqrt{3} + 1\right)} - \frac{3 \, {\left(-i \, \sqrt{3} + 1\right)}}{2 \, {\left(\frac{1}{2} i \, \sqrt{107} + \frac{1}{2}\right)}^{\frac{1}{3}}}, 1\right), \left(-\frac{1}{2} \, {\left(\frac{1}{2} i \, \sqrt{107} + \frac{1}{2}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} - \frac{3 \, {\left(i \, \sqrt{3} + 1\right)}}{2 \, {\left(\frac{1}{2} i \, \sqrt{107} + \frac{1}{2}\right)}^{\frac{1}{3}}}, 1\right), \left({\left(\frac{1}{2} i \, \sqrt{107} + \frac{1}{2}\right)}^{\frac{1}{3}} + \frac{3}{{\left(\frac{1}{2} i \, \sqrt{107} + \frac{1}{2}\right)}^{\frac{1}{3}}}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.0541</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph013.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #13</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 \, x^{3} + 5 \, x^{2} + 15 \, x - 2</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, \sqrt{-6 \, \sqrt{5} + 15} - \frac{1}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{-6 \, \sqrt{5} + 15} - \frac{1}{2}, 1\right), \left(-\frac{1}{2} \, \sqrt{6 \, \sqrt{5} + 15} - \frac{1}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{6 \, \sqrt{5} + 15} - \frac{1}{2}, 1\right), \left(2, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.1654</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph014.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #14</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 \, x^{3} + 2 \, x^{2} + 12 \, x + 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, {\left(\frac{1}{3} i \, \sqrt{47} - \frac{17}{27}\right)}^{\frac{1}{3}} {\left(i \, \sqrt{3} + 1\right)} - \frac{8 \, {\left(-i \, \sqrt{3} + 1\right)}}{9 \, {\left(\frac{1}{3} i \, \sqrt{47} - \frac{17}{27}\right)}^{\frac{1}{3}}} - \frac{2}{3}, 1\right), \left(-\frac{1}{2} \, {\left(\frac{1}{3} i \, \sqrt{47} - \frac{17}{27}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} - \frac{8 \, {\left(i \, \sqrt{3} + 1\right)}}{9 \, {\left(\frac{1}{3} i \, \sqrt{47} - \frac{17}{27}\right)}^{\frac{1}{3}}} - \frac{2}{3}, 1\right), \left({\left(\frac{1}{3} i \, \sqrt{47} - \frac{17}{27}\right)}^{\frac{1}{3}} + \frac{16}{9 \, {\left(\frac{1}{3} i \, \sqrt{47} - \frac{17}{27}\right)}^{\frac{1}{3}}} - \frac{2}{3}, 1\right), \left(-\sqrt{3} + 1, 1\right), \left(\sqrt{3} + 1, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.0861</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph015.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #15</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 \, x^{3} + 2 \, x^{2} + 21 \, x - 5</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, \sqrt{21} - \frac{1}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{21} - \frac{1}{2}, 1\right), \left(-\frac{1}{2} \, {\left(\frac{1}{6} i \, \sqrt{107} + \frac{11}{54}\right)}^{\frac{1}{3}} {\left(i \, \sqrt{3} + 1\right)} - \frac{13 \, {\left(-i \, \sqrt{3} + 1\right)}}{18 \, {\left(\frac{1}{6} i \, \sqrt{107} + \frac{11}{54}\right)}^{\frac{1}{3}}} + \frac{1}{3}, 1\right), \left(-\frac{1}{2} \, {\left(\frac{1}{6} i \, \sqrt{107} + \frac{11}{54}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} - \frac{13 \, {\left(i \, \sqrt{3} + 1\right)}}{18 \, {\left(\frac{1}{6} i \, \sqrt{107} + \frac{11}{54}\right)}^{\frac{1}{3}}} + \frac{1}{3}, 1\right), \left({\left(\frac{1}{6} i \, \sqrt{107} + \frac{11}{54}\right)}^{\frac{1}{3}} + \frac{13}{9 \, {\left(\frac{1}{6} i \, \sqrt{107} + \frac{11}{54}\right)}^{\frac{1}{3}}} + \frac{1}{3}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~2.7913</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph016.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #16</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 \, x^{3} - 10 \, x^{2} + 1</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{3}{4} \, \sqrt{5} - \frac{1}{2} \, \sqrt{-\frac{3}{2} \, \sqrt{5} + \frac{15}{2}} + \frac{1}{4}, 1\right), \left(-\frac{3}{4} \, \sqrt{5} + \frac{1}{2} \, \sqrt{-\frac{3}{2} \, \sqrt{5} + \frac{15}{2}} + \frac{1}{4}, 1\right), \left(\frac{3}{4} \, \sqrt{5} - \frac{1}{2} \, \sqrt{\frac{3}{2} \, \sqrt{5} + \frac{15}{2}} + \frac{1}{4}, 1\right), \left(\frac{3}{4} \, \sqrt{5} + \frac{1}{2} \, \sqrt{\frac{3}{2} \, \sqrt{5} + \frac{15}{2}} + \frac{1}{4}, 1\right), \left(-1, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.5743</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph017.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #17</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 \, x^{3} - 7 \, x^{2} + 12 \, x + 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, \sqrt{13} + \frac{3}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{13} + \frac{3}{2}, 1\right), \left(1, 1\right), \left(-2, 2\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.3028</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph018.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #18</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 \, x^{3} - 4 \, x^{2} + 15 \, x + 7</span><br />
+                Spectrum: <span class="math inline">\left[\left(x^{5} - 10 \, x^{3} - 4 \, x^{2} + 15 \, x + 7, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.0784</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph019.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #19</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 \, x^{3} - 7 \, x^{2} + 12 \, x + 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, \sqrt{13} + \frac{3}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{13} + \frac{3}{2}, 1\right), \left(1, 1\right), \left(-2, 2\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.3028</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph020.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #20</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 10 \, x^{3} - 4 \, x^{2} + 15 \, x + 7</span><br />
+                Spectrum: <span class="math inline">\left[\left(x^{5} - 10 \, x^{3} - 4 \, x^{2} + 15 \, x + 7, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.0784</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph021.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #21</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 8 \, x^{3} + 45 \, x^{2} + 24 \, x - 20</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, {\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}} {\left(i \, \sqrt{3} + 1\right)} + \frac{i \, \sqrt{3} - 1}{{\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}}} + 1, 1\right), \left(-\frac{1}{2} \, {\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} + \frac{-i \, \sqrt{3} - 1}{{\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}}} + 1, 1\right), \left({\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}} + \frac{2}{{\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}}} + 1, 1\right), \left(-2, 1\right), \left(-\frac{1}{2} \, \sqrt{21} - \frac{1}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{21} - \frac{1}{2}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.6691</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph022.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #22</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 8 \, x^{3} + 36 \, x^{2} + 15 \, x - 2</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(x^{5} - 2 \, x^{4} - 11 \, x^{3} + 14 \, x^{2} + 8 \, x - 1, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.7862</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph023.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #23</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 5 \, x^{3} + 45 \, x^{2} + 15 \, x - 14</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(x^{5} - 2 \, x^{4} - 11 \, x^{3} + 17 \, x^{2} + 11 \, x - 7, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.5478</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph024.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #24</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 2 \, x^{3} + 45 \, x^{2} + 6 \, x - 8</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(x^{5} - 2 \, x^{4} - 11 \, x^{3} + 20 \, x^{2} + 5 \, x - 4, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.4092</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph025.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #25</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 2 \, x^{3} + 54 \, x^{2} - 3 \, x - 35</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, \sqrt{21} - \frac{1}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{21} - \frac{1}{2}, 1\right), \left(1, 1\right), \left(-\frac{1}{2} \, {\left(\frac{1}{2} i \, \sqrt{59} + \frac{7}{2}\right)}^{\frac{1}{3}} {\left(i \, \sqrt{3} + 1\right)} - \frac{3 \, {\left(-i \, \sqrt{3} + 1\right)}}{2 \, {\left(\frac{1}{2} i \, \sqrt{59} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right), \left(-\frac{1}{2} \, {\left(\frac{1}{2} i \, \sqrt{59} + \frac{7}{2}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} - \frac{3 \, {\left(i \, \sqrt{3} + 1\right)}}{2 \, {\left(\frac{1}{2} i \, \sqrt{59} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right), \left({\left(\frac{1}{2} i \, \sqrt{59} + \frac{7}{2}\right)}^{\frac{1}{3}} + \frac{3}{{\left(\frac{1}{2} i \, \sqrt{59} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.3318</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph026.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #26</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 11 \, x^{3} + 36 \, x^{2} + 24 \, x - 8</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(x^{5} - 2 \, x^{4} - 11 \, x^{3} + 11 \, x^{2} + 14 \, x - 4, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.882</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph027.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #27</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 8 \, x^{3} + 45 \, x^{2} + 15 \, x - 38</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} + 168}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} - \frac{42}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}} - \frac{33}{2 \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} + 168}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} + 168}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} - \frac{42}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}} - \frac{33}{2 \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} + 168}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} + 168}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} - \frac{42}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}} + \frac{33}{2 \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} + 168}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} + 168}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} - \frac{42}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}} + \frac{33}{2 \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} + 168}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(1, 1\right), \left(-2, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.7148</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph028.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #28</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} + x^{3} + 54 \, x^{2} - 12 \, x - 29</span><br />
+                Spectrum: <span class="math inline">\left[\left(1, 1\right), \left(x^{5} + x^{4} - 14 \, x^{3} - 13 \, x^{2} + 41 \, x + 29, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.1489</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph029.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #29</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} + x^{3} + 45 \, x^{2} - 12 \, x - 20</span><br />
+                Spectrum: <span class="math inline">\left[\left(1, 1\right), \left(-2, 1\right), \left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} + 132}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} - \frac{33}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}} + \frac{39}{2 \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} + 132}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} + 132}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} - \frac{33}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}} + \frac{39}{2 \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} + 132}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} + 132}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} - \frac{33}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}} - \frac{39}{2 \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} + 132}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} + 132}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} - \frac{33}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}} - \frac{39}{2 \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} + 132}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.3387</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph030.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #30</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 17 \, x^{3} + 18 \, x^{2} + 15 \, x - 2</span><br />
+                Spectrum: <span class="math inline">\left[\left(1, 1\right), \left(-2, 1\right), \left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} - \frac{15}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}} - \frac{105}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} - \frac{15}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}} - \frac{105}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} - \frac{15}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}} + \frac{105}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} - \frac{15}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}} + \frac{105}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~4.2218</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph031.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #31</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 14 \, x^{3} + 27 \, x^{2} + 24 \, x + 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(x^{5} - 2 \, x^{4} - 11 \, x^{3} + 8 \, x^{2} + 11 \, x + 2, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~4.0541</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph032.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #32</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 8 \, x^{3} + 45 \, x^{2} + 24 \, x - 20</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, {\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}} {\left(i \, \sqrt{3} + 1\right)} + \frac{i \, \sqrt{3} - 1}{{\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}}} + 1, 1\right), \left(-\frac{1}{2} \, {\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} + \frac{-i \, \sqrt{3} - 1}{{\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}}} + 1, 1\right), \left({\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}} + \frac{2}{{\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}}} + 1, 1\right), \left(-2, 1\right), \left(-\frac{1}{2} \, \sqrt{21} - \frac{1}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{21} - \frac{1}{2}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.6691</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph033.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #33</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 11 \, x^{3} + 36 \, x^{2} + 24 \, x - 8</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(x^{5} - 2 \, x^{4} - 11 \, x^{3} + 11 \, x^{2} + 14 \, x - 4, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.882</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph034.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #34</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 5 \, x^{3} + 36 \, x^{2} - 3 \, x - 14</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, {\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}} {\left(i \, \sqrt{3} + 1\right)} - \frac{2 \, {\left(-i \, \sqrt{3} + 1\right)}}{{\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right), \left(-\frac{1}{2} \, {\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} - \frac{2 \, {\left(i \, \sqrt{3} + 1\right)}}{{\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right), \left({\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}} + \frac{4}{{\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right), \left(-2, 1\right), \left(1, 2\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.7254</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph035.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #35</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 17 \, x^{3} + 18 \, x^{2} + 15 \, x - 2</span><br />
+                Spectrum: <span class="math inline">\left[\left(1, 1\right), \left(-2, 1\right), \left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} - \frac{15}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}} - \frac{105}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} - \frac{15}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}} - \frac{105}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} - \frac{15}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}} + \frac{105}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} - \frac{15}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}} + \frac{105}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~4.2218</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph036.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #36</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 8 \, x^{3} + 36 \, x^{2} + 15 \, x - 2</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(x^{5} - 2 \, x^{4} - 11 \, x^{3} + 14 \, x^{2} + 8 \, x - 1, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.7862</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph037.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #37</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 8 \, x^{3} + 18 \, x^{2} + 6 \, x - 2</span><br />
+                Spectrum: <span class="math inline">\left[\left(1, 1\right), \left(x^{5} + x^{4} - 14 \, x^{3} - 22 \, x^{2} - 4 \, x + 2, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.9731</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph038.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #38</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 5 \, x^{3} + 36 \, x^{2} + 15 \, x - 5</span><br />
+                Spectrum: <span class="math inline">\left[\left(x^{6} - 15 \, x^{4} - 5 \, x^{3} + 36 \, x^{2} + 15 \, x - 5, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.6608</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph039.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #39</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 5 \, x^{3} + 36 \, x^{2} - 3 \, x - 14</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, {\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}} {\left(i \, \sqrt{3} + 1\right)} - \frac{2 \, {\left(-i \, \sqrt{3} + 1\right)}}{{\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right), \left(-\frac{1}{2} \, {\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} - \frac{2 \, {\left(i \, \sqrt{3} + 1\right)}}{{\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right), \left({\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}} + \frac{4}{{\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right), \left(-2, 1\right), \left(1, 2\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.7254</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph040.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #40</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 2 \, x^{3} + 27 \, x^{2} + 15 \, x + 1</span><br />
+                Spectrum: <span class="math inline">\left[\left(x^{6} - 15 \, x^{4} - 2 \, x^{3} + 27 \, x^{2} + 15 \, x + 1, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.6309</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph041.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #41</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 5 \, x^{3} + 45 \, x^{2} + 33 \, x - 5</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\sqrt{6} + 1, 1\right), \left(\sqrt{6} + 1, 1\right), \left(-\frac{1}{2} \, \sqrt{-6 \, \sqrt{5} + 15} - \frac{1}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{-6 \, \sqrt{5} + 15} - \frac{1}{2}, 1\right), \left(-\frac{1}{2} \, \sqrt{6 \, \sqrt{5} + 15} - \frac{1}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{6 \, \sqrt{5} + 15} - \frac{1}{2}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.4495</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph042.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #42</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} + x^{3} + 45 \, x^{2} + 6 \, x - 11</span><br />
+                Spectrum: <span class="math inline">\left[\left(x^{6} - 15 \, x^{4} + x^{3} + 45 \, x^{2} + 6 \, x - 11, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.4157</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph043.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #43</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 5 \, x^{3} + 45 \, x^{2} + 33 \, x - 5</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\sqrt{6} + 1, 1\right), \left(\sqrt{6} + 1, 1\right), \left(-\frac{1}{2} \, \sqrt{-6 \, \sqrt{5} + 15} - \frac{1}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{-6 \, \sqrt{5} + 15} - \frac{1}{2}, 1\right), \left(-\frac{1}{2} \, \sqrt{6 \, \sqrt{5} + 15} - \frac{1}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{6 \, \sqrt{5} + 15} - \frac{1}{2}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.4495</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph044.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #44</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 2 \, x^{3} + 45 \, x^{2} + 6 \, x - 8</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(x^{5} - 2 \, x^{4} - 11 \, x^{3} + 20 \, x^{2} + 5 \, x - 4, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.4092</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph045.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #45</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} + 4 \, x^{3} + 36 \, x^{2} + 24 \, x + 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\sqrt{3} - 2, 1\right), \left(\sqrt{3} - 2, 1\right), \left(-\sqrt{3} + 1, 2\right), \left(\sqrt{3} + 1, 2\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.7321</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph046.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #46</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} + 4 \, x^{3} + 54 \, x^{2} - 21 \, x - 23</span><br />
+                Spectrum: <span class="math inline">\left[\left(1, 1\right), \left(x^{5} + x^{4} - 14 \, x^{3} - 10 \, x^{2} + 44 \, x + 23, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.2926</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph047.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #47</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} + 4 \, x^{3} + 36 \, x^{2} + 6 \, x - 5</span><br />
+                Spectrum: <span class="math inline">\left[\left(x^{6} - 15 \, x^{4} + 4 \, x^{3} + 36 \, x^{2} + 6 \, x - 5, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.6853</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph048.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #48</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} + x^{3} + 45 \, x^{2} + 6 \, x - 11</span><br />
+                Spectrum: <span class="math inline">\left[\left(x^{6} - 15 \, x^{4} + x^{3} + 45 \, x^{2} + 6 \, x - 11, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.4157</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph049.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #49</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 5 \, x^{3} + 36 \, x^{2} + 15 \, x - 5</span><br />
+                Spectrum: <span class="math inline">\left[\left(x^{6} - 15 \, x^{4} - 5 \, x^{3} + 36 \, x^{2} + 15 \, x - 5, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.6608</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph050.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #50</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} + x^{3} + 45 \, x^{2} + 6 \, x - 11</span><br />
+                Spectrum: <span class="math inline">\left[\left(x^{6} - 15 \, x^{4} + x^{3} + 45 \, x^{2} + 6 \, x - 11, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.4157</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph051.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #51</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} + 4 \, x^{3} + 63 \, x^{2} - 30 \, x - 50</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\sqrt{3} + 1, 1\right), \left(\sqrt{3} + 1, 1\right), \left(-\frac{1}{2} \, \sqrt{21} - \frac{1}{2}, 2\right), \left(\frac{1}{2} \, \sqrt{21} - \frac{1}{2}, 2\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~2.7321</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph052.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #52</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 2 \, x^{3} + 45 \, x^{2} + 6 \, x - 8</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(x^{5} - 2 \, x^{4} - 11 \, x^{3} + 20 \, x^{2} + 5 \, x - 4, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.4092</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph053.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #53</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} + 4 \, x^{3} + 54 \, x^{2} - 21 \, x - 23</span><br />
+                Spectrum: <span class="math inline">\left[\left(1, 1\right), \left(x^{5} + x^{4} - 14 \, x^{3} - 10 \, x^{2} + 44 \, x + 23, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.2926</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph054.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #54</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} + x^{3} + 45 \, x^{2} + 6 \, x - 11</span><br />
+                Spectrum: <span class="math inline">\left[\left(x^{6} - 15 \, x^{4} + x^{3} + 45 \, x^{2} + 6 \, x - 11, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.4157</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph055.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #55</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} + x^{3} + 54 \, x^{2} - 12 \, x - 29</span><br />
+                Spectrum: <span class="math inline">\left[\left(1, 1\right), \left(x^{5} + x^{4} - 14 \, x^{3} - 13 \, x^{2} + 41 \, x + 29, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.1489</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph056.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #56</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 2 \, x^{3} + 27 \, x^{2} + 15 \, x + 1</span><br />
+                Spectrum: <span class="math inline">\left[\left(x^{6} - 15 \, x^{4} - 2 \, x^{3} + 27 \, x^{2} + 15 \, x + 1, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.6309</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph057.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #57</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 20 \, x^{3} + 6 \, x + 1</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, {\left(i \, \sqrt{3} + 1\right)} {\left(\frac{1}{2} i \, \sqrt{3} - \frac{1}{2}\right)}^{\frac{1}{3}} + {\left(\frac{1}{2} i \, \sqrt{3} - \frac{1}{2}\right)}^{\frac{2}{3}} - 1, 1\right), \left({\left(\frac{1}{2} i \, \sqrt{3} - \frac{1}{2}\right)}^{\frac{4}{3}} - \frac{i \, \sqrt{3} + 1}{2 \, {\left(\frac{1}{2} i \, \sqrt{3} - \frac{1}{2}\right)}^{\frac{1}{3}}} - 1, 1\right), \left({\left(\frac{1}{2} i \, \sqrt{3} - \frac{1}{2}\right)}^{\frac{1}{3}} + \frac{1}{{\left(\frac{1}{2} i \, \sqrt{3} - \frac{1}{2}\right)}^{\frac{1}{3}}} - 1, 1\right), \left(-\frac{1}{2} \, {\left(\frac{3}{2} i \, \sqrt{3} + \frac{9}{2}\right)}^{\frac{1}{3}} {\left(i \, \sqrt{3} + 1\right)} - \frac{3 \, {\left(-i \, \sqrt{3} + 1\right)}}{2 \, {\left(\frac{3}{2} i \, \sqrt{3} + \frac{9}{2}\right)}^{\frac{1}{3}}} + 1, 1\right), \left(-\frac{1}{2} \, {\left(\frac{3}{2} i \, \sqrt{3} + \frac{9}{2}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} - \frac{3 \, {\left(i \, \sqrt{3} + 1\right)}}{2 \, {\left(\frac{3}{2} i \, \sqrt{3} + \frac{9}{2}\right)}^{\frac{1}{3}}} + 1, 1\right), \left({\left(\frac{3}{2} i \, \sqrt{3} + \frac{9}{2}\right)}^{\frac{1}{3}} + \frac{3}{{\left(\frac{3}{2} i \, \sqrt{3} + \frac{9}{2}\right)}^{\frac{1}{3}}} + 1, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~4.4115</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph058.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #58</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 17 \, x^{3} + 18 \, x^{2} + 15 \, x - 2</span><br />
+                Spectrum: <span class="math inline">\left[\left(1, 1\right), \left(-2, 1\right), \left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} - \frac{15}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}} - \frac{105}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} - \frac{15}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}} - \frac{105}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} - \frac{15}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}} + \frac{105}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} - \frac{15}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}} + \frac{105}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~4.2218</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph059.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #59</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 14 \, x^{3} + 27 \, x^{2} + 24 \, x + 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(x^{5} - 2 \, x^{4} - 11 \, x^{3} + 8 \, x^{2} + 11 \, x + 2, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~4.0541</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph060.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #60</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 17 \, x^{3} + 18 \, x^{2} + 15 \, x - 2</span><br />
+                Spectrum: <span class="math inline">\left[\left(1, 1\right), \left(-2, 1\right), \left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} - \frac{15}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}} - \frac{105}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} - \frac{15}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}} - \frac{105}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} - \frac{15}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}} + \frac{105}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} - \frac{15}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}} + \frac{105}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}} + 60}{{\left(3 i \, \sqrt{366} - 9\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~4.2218</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph061.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #61</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 14 \, x^{3} + 27 \, x^{2} + 24 \, x + 4</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(x^{5} - 2 \, x^{4} - 11 \, x^{3} + 8 \, x^{2} + 11 \, x + 2, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~4.0541</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph062.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #62</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 2 \, x^{3} + 54 \, x^{2} + 6 \, x - 44</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}} + 192}{{\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}} - \frac{48}{{\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}}} + \frac{15}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}} + 192}{{\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}} + 192}{{\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}} - \frac{48}{{\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}}} + \frac{15}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}} + 192}{{\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}} + 192}{{\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}} - \frac{48}{{\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}}} - \frac{15}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}} + 192}{{\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}} + 192}{{\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}} - \frac{48}{{\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}}} - \frac{15}{2 \, \sqrt{\frac{4 \, {\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{2}{3}} + 33 \, {\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}} + 192}{{\left(3 i \, \sqrt{1263} + 315\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(1, 1\right), \left(-2, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.2905</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph063.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #63</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 8 \, x^{3} + 36 \, x^{2} + 33 \, x + 7</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, {\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}} {\left(i \, \sqrt{3} + 1\right)} - \frac{2 \, {\left(-i \, \sqrt{3} + 1\right)}}{{\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right), \left(-\frac{1}{2} \, {\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} - \frac{2 \, {\left(i \, \sqrt{3} + 1\right)}}{{\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right), \left({\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}} + \frac{4}{{\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right), \left(-\frac{1}{2} \, {\left(i \, \sqrt{3} + 1\right)} {\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}} - \frac{-i \, \sqrt{3} + 1}{2 \, {\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}}}, 1\right), \left(-\frac{1}{2} \, {\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} - \frac{i \, \sqrt{3} + 1}{2 \, {\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}}}, 1\right), \left({\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}} + \frac{1}{{\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}}}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.7254</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph064.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #64</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 2 \, x^{3} + 45 \, x^{2} + 6 \, x - 8</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(x^{5} - 2 \, x^{4} - 11 \, x^{3} + 20 \, x^{2} + 5 \, x - 4, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.4092</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph065.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #65</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 2 \, x^{3} + 45 \, x^{2} + 24 \, x + 1</span><br />
+                Spectrum: <span class="math inline">\left[\left(x^{6} - 15 \, x^{4} - 2 \, x^{3} + 45 \, x^{2} + 24 \, x + 1, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.3069</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph066.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #66</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 8 \, x^{3} + 45 \, x^{2} + 24 \, x - 20</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, {\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}} {\left(i \, \sqrt{3} + 1\right)} + \frac{i \, \sqrt{3} - 1}{{\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}}} + 1, 1\right), \left(-\frac{1}{2} \, {\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} + \frac{-i \, \sqrt{3} - 1}{{\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}}} + 1, 1\right), \left({\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}} + \frac{2}{{\left(\frac{1}{2} i \, \sqrt{23} + \frac{3}{2}\right)}^{\frac{1}{3}}} + 1, 1\right), \left(-2, 1\right), \left(-\frac{1}{2} \, \sqrt{21} - \frac{1}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{21} - \frac{1}{2}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.6691</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph067.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #67</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 5 \, x^{3} + 45 \, x^{2} + 15 \, x - 14</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(x^{5} - 2 \, x^{4} - 11 \, x^{3} + 17 \, x^{2} + 11 \, x - 7, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.5478</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph068.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #68</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 2 \, x^{3} + 54 \, x^{2} - 3 \, x - 35</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, \sqrt{21} - \frac{1}{2}, 1\right), \left(\frac{1}{2} \, \sqrt{21} - \frac{1}{2}, 1\right), \left(1, 1\right), \left(-\frac{1}{2} \, {\left(\frac{1}{2} i \, \sqrt{59} + \frac{7}{2}\right)}^{\frac{1}{3}} {\left(i \, \sqrt{3} + 1\right)} - \frac{3 \, {\left(-i \, \sqrt{3} + 1\right)}}{2 \, {\left(\frac{1}{2} i \, \sqrt{59} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right), \left(-\frac{1}{2} \, {\left(\frac{1}{2} i \, \sqrt{59} + \frac{7}{2}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} - \frac{3 \, {\left(i \, \sqrt{3} + 1\right)}}{2 \, {\left(\frac{1}{2} i \, \sqrt{59} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right), \left({\left(\frac{1}{2} i \, \sqrt{59} + \frac{7}{2}\right)}^{\frac{1}{3}} + \frac{3}{{\left(\frac{1}{2} i \, \sqrt{59} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.3318</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph069.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #69</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 2 \, x^{3} + 45 \, x^{2} + 6 \, x - 8</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 1\right), \left(x^{5} - 2 \, x^{4} - 11 \, x^{3} + 20 \, x^{2} + 5 \, x - 4, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.4092</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph070.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #70</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 11 \, x^{3} + 27 \, x^{2} + 24 \, x + 1</span><br />
+                Spectrum: <span class="math inline">\left[\left(x^{6} - 15 \, x^{4} - 11 \, x^{3} + 27 \, x^{2} + 24 \, x + 1, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.9578</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph071.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #71</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 14 \, x^{3} + 36 \, x^{2} + 24 \, x - 32</span><br />
+                Spectrum: <span class="math inline">\left[\left(4, 1\right), \left(1, 2\right), \left(-2, 3\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~4.0</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph072.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #72</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} + x^{3} + 45 \, x^{2} - 12 \, x - 20</span><br />
+                Spectrum: <span class="math inline">\left[\left(1, 1\right), \left(-2, 1\right), \left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} + 132}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} - \frac{33}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}} + \frac{39}{2 \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} + 132}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} + 132}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} - \frac{33}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}} + \frac{39}{2 \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} + 132}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} + 132}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} - \frac{33}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}} - \frac{39}{2 \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} + 132}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} + 132}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} - \frac{33}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}} - \frac{39}{2 \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}} + 132}{{\left(\frac{3}{2} i \, \sqrt{7323} + \frac{279}{2}\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.3387</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph073.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #73</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 2 \, x^{3} + 45 \, x^{2} - 12 \, x - 17</span><br />
+                Spectrum: <span class="math inline">\left[\left(1, 1\right), \left(x^{5} + x^{4} - 14 \, x^{3} - 16 \, x^{2} + 29 \, x + 17, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.5076</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph074.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #74</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 11 \, x^{3} + 27 \, x^{2} + 24 \, x + 1</span><br />
+                Spectrum: <span class="math inline">\left[\left(x^{6} - 15 \, x^{4} - 11 \, x^{3} + 27 \, x^{2} + 24 \, x + 1, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.9578</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph075.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #75</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 8 \, x^{3} + 36 \, x^{2} + 33 \, x + 7</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{2} \, {\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}} {\left(i \, \sqrt{3} + 1\right)} - \frac{2 \, {\left(-i \, \sqrt{3} + 1\right)}}{{\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right), \left(-\frac{1}{2} \, {\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} - \frac{2 \, {\left(i \, \sqrt{3} + 1\right)}}{{\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right), \left({\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}} + \frac{4}{{\left(\frac{3}{2} i \, \sqrt{23} + \frac{7}{2}\right)}^{\frac{1}{3}}}, 1\right), \left(-\frac{1}{2} \, {\left(i \, \sqrt{3} + 1\right)} {\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}} - \frac{-i \, \sqrt{3} + 1}{2 \, {\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}}}, 1\right), \left(-\frac{1}{2} \, {\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}} {\left(-i \, \sqrt{3} + 1\right)} - \frac{i \, \sqrt{3} + 1}{2 \, {\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}}}, 1\right), \left({\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}} + \frac{1}{{\left(\frac{1}{2} i \, \sqrt{3} + \frac{1}{2}\right)}^{\frac{1}{3}}}, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.7254</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="small_tournaments/graph076.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #76</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{6} - 15 \, x^{4} - 8 \, x^{3} + 45 \, x^{2} + 15 \, x - 38</span><br />
+                Spectrum: <span class="math inline">\left[\left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} + 168}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} - \frac{42}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}} - \frac{33}{2 \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} + 168}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(-\frac{1}{4} \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} + 168}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} - \frac{42}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}} - \frac{33}{2 \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} + 168}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} + 168}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}}} - \frac{1}{2} \, \sqrt{-{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} - \frac{42}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}} + \frac{33}{2 \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} + 168}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(\frac{1}{4} \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} + 168}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}}} + \frac{1}{2} \, \sqrt{-{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} - \frac{42}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}} + \frac{33}{2 \, \sqrt{\frac{4 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{2}{3}} + 33 \, {\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}} + 168}{{\left(\frac{3}{2} i \, \sqrt{5703} + \frac{495}{2}\right)}^{\frac{1}{3}}}}} + \frac{33}{2}} + \frac{1}{4}, 1\right), \left(1, 1\right), \left(-2, 1\right)\right]</span><br />
+                Spectral radius:
+                <span class="math inline">~3.7148</span>
+            </td>
+        </tr>
+        
+    </table>
+</body>
+
+</html>

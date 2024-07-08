@@ -59,7 +59,9 @@
                 <h4>Graph #{{ item.id }}</h4>
                 Characteristic polynomial:
                 <span class="math inline">{{ item.charpoly }}</span><br />
-                Spectrum: <span class="math inline">{{ item.spec }}</span>
+                Spectrum: <span class="math inline">{{ item.spec }}</span><br />
+                Spectral radius:
+                <span class="math inline">~{{ item.r | round(4) if item.r else '?' }}</span>
             </td>
         </tr>
         {% endfor %}
