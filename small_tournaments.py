@@ -2,25 +2,7 @@ from os import makedirs
 
 from sage.all import *
 
-from utils import enumerate_graphs
-
-
-def spectral_radius(p):
-    rh = 0
-    while True:
-        try:
-            rh = p.find_root(rh + 1e-8, p.degree(var('x')))
-        except RuntimeError:
-            break
-
-    rl = 0
-    while True:
-        try:
-            rl = p.find_root(-p.degree(var('x')), rl - 1e-8)
-        except RuntimeError:
-            break
-
-    return max(-rl, rh)
+from utils import enumerate_graphs, spectral_radius
 
 
 def save(location: str, order: int) -> list:
