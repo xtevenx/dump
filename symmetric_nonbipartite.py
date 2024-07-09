@@ -2,7 +2,7 @@ from os import makedirs
 
 from sage.all import *
 
-from utils import enumerate_graphs
+from utils import enumerate_graphs, spectral_radius
 
 
 def is_symmetric(p):
@@ -37,7 +37,7 @@ def save(location: str, order: int, oriented_only: bool = False) -> list:
 
         M = G.adjacency_matrix() * E(6)
         M = M + conjugate(M.transpose())
-        P = M.charpoly()
+        P = SR(M.charpoly())
 
         if is_symmetric(P):
             id = len(info) + 1
@@ -52,7 +52,13 @@ def save(location: str, order: int, oriented_only: bool = False) -> list:
             except NotImplementedError:
                 solutions = 'Unknown'
 
-            info.append({'fname': fname, 'id': id, 'charpoly': latex(P), 'spec': latex(solutions)})
+            info.append({
+                'fname': fname,
+                'id': id,
+                'charpoly': latex(P),
+                'r': spectral_radius(P),
+                'spec': latex(solutions)
+            })
 
     return info
 
