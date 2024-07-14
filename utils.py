@@ -121,7 +121,67 @@ def enumerate_graphs(n):
                     yield graph
 
 
+from os import makedirs
+
+# jinja2 docs: https://jinja.palletsprojects.com/en/3.0.x/templates/
+import jinja2
+
 from sage.all import *
+
+
+def get_charpoly(G):
+    M = G.adjacency_matrix() * E(6)
+    M = M + conjugate(M.transpose())
+    return SR(M.charpoly())
+
+
+def is_oriented(G):
+    A = G.adjacency_matrix()
+    return A.elementwise_product(A.transpose()) == 0
+
+
+def is_symmetric(p):
+    c = p.coefficients(sparse=False)
+
+    i = 0
+    while c[i] == 0:
+        i = i + 1
+
+    for j in range(i + 1, len(c), 2):
+        if c[j] != 0:
+            return False
+    return True
+
+
+def save(location: str, graphs: list):
+    makedirs(location, exist_ok=True)
+
+    # WARN: change 999 to actual useful value (max smaller complete graph edges) if necessary.
+    graphs.sort(key=lambda G: len(G.vertices()) * 999 + len(G.edges()))
+
+    output = []
+
+    for G in graphs:
+        id = len(output) + 1
+        fname = f'{location}/graph{id:03}.png'
+        G.plot(layout='spring', iterations=9001).save(fname)
+
+        P = get_charpoly(G)
+        S = solve(P, var('x'), multiplicities=True)
+        S = [(s.right_hand_side(), m) for s, m in zip(*S)]
+
+        output.append({
+            'id': id,
+            'fname': fname,
+            'charpoly': latex(P),
+            'r': spectral_radius(P),
+            'spec': latex(S)
+        })
+
+    with open('template.html') as fp:
+        html = jinja2.Template(fp.read()).render(list=output)
+    with open(f'{location}.html', 'w') as fp:
+        fp.write(html)
 
 
 def spectral_radius(p):
