@@ -36,6 +36,7 @@ def is_symmetric(p):
 
 DECIMAL_PRECISION = 8
 RENDERED_IMAGES = 500
+LIST_GRAPHS = 5
 
 
 def save(location: str, graphs: list):
@@ -53,6 +54,7 @@ def save(location: str, graphs: list):
         S = [(s.right_hand_side(), m) for s, m in zip(*S)]
 
         radius = round(spectral_radius(P), DECIMAL_PRECISION)
+        rank = get_rank(P)
 
         if not summary or summary[-1]['order'] < G.order():
             summary.append({
@@ -60,17 +62,26 @@ def save(location: str, graphs: list):
                 'count': 1,
                 'max_radius': radius,
                 'max_radius_graphs': [id],
+                'min_rank': rank,
+                'min_rank_graphs': [id],
             })
 
         else:
             s = summary[-1]
 
             s['count'] += 1
+
             if radius > s['max_radius']:
                 s['max_radius'] = radius
                 s['max_radius_graphs'] = []
             if radius == s['max_radius']:
                 s['max_radius_graphs'].append(id)
+
+            if rank < s['min_rank']:
+                s['min_rank'] = rank
+                s['min_rank_graphs'] = []
+            if rank == s['min_rank']:
+                s['min_rank_graphs'].append(id)
 
         if id < RENDERED_IMAGES:
             fname = f'{location}/graph{id:03}.png'
@@ -83,6 +94,12 @@ def save(location: str, graphs: list):
                 'radius': radius,
                 'spec': latex(S)
             })
+
+    for s in summary:
+        for k, v in s.items():
+            if k.endswith('_graphs'):
+                if len(v) > LIST_GRAPHS:
+                    s[k] = v[:LIST_GRAPHS] + ['...']
 
     with open('template.html') as fp:
         html = jinja2.Template(fp.read()).render(summary=summary, list=output)
