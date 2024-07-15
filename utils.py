@@ -6,6 +6,14 @@ import jinja2
 from sage.all import *
 
 
+def count_distinct_roots(P):
+    return P.degree(var('x')) - (P.gcd(P.derivative())).degree(var('x'))
+
+
+def count_integer_roots(P):
+    return sum(bool(P(x=c) == 0) for c in range(-P.degree(var('x')), P.degree(var('x')) + 1))
+
+
 def get_charpoly(G):
     M = G.adjacency_matrix() * E(6)
     M = M + conjugate(M.transpose())

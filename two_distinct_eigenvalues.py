@@ -17,9 +17,7 @@ if __name__ == '__main__':
         M = M + conjugate(M.transpose())
         P = SR(M.charpoly())
 
-        solutions = solve(P, var('x'))
-
-        if len(solutions) == 2:
+        if count_distinct_roots(P) == 2:
             data.append(G)
 
     save(Path(__file__).stem, data)

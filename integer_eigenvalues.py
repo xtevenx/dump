@@ -17,9 +17,7 @@ if __name__ == '__main__':
         M = M + conjugate(M.transpose())
         P = SR(M.charpoly())
 
-        solutions = solve(P, var('x'), multiplicities=True)
-
-        if all(s.right_hand_side().is_integer() for s in solutions[0]):
+        if count_integer_roots(P) == count_distinct_roots(P):
             data.append(G)
 
     save(Path(__file__).stem, data)
