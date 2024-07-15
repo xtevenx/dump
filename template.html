@@ -50,6 +50,21 @@
 
 <body>
     <table>
+        <tr>
+            <td>Order</td>
+            <td>Count</td>
+            <td>Maximum Spectral Radius</td>
+        </tr>
+        {% for item in summary %}
+        <tr>
+            <td>{{ item.order }}</td>
+            <td>{{ item.count }}</td>
+            <td>{{ item.max_radius }} {{ item.max_radius_graphs }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <table>
         {% for item in list %}
         <tr>
             <td style="text-align: center">
@@ -61,7 +76,7 @@
                 <span class="math inline">{{ item.charpoly }}</span><br />
                 Spectrum: <span class="math inline">{{ item.spec }}</span><br />
                 Spectral radius:
-                <span class="math inline">~{{ item.r | round(4) if item.r else '?' }}</span>
+                <span class="math inline">{{ item.radius if item.radius else '?' }}</span>
             </td>
         </tr>
         {% endfor %}
