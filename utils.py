@@ -35,7 +35,7 @@ def is_symmetric(p):
 
 
 DECIMAL_PRECISION = 8
-RENDERED_IMAGES = 500
+RENDER_GRAPHS = 300
 LIST_GRAPHS = 5
 
 
@@ -83,23 +83,28 @@ def save(location: str, graphs: list):
             if rank == s['min_rank']:
                 s['min_rank_graphs'].append(id)
 
-        if id < RENDERED_IMAGES:
-            fname = f'{location}/graph{id:03}.png'
-            G.plot(layout='spring', iterations=9001).save(fname)
+        output.append({
+            'id': id,
+            'fname': f'{location}/graph{id:06}.png',
+            'charpoly': latex(P),
+            'radius': radius,
+            'spec': latex(S)
+        })
 
-            output.append({
-                'id': id,
-                'fname': fname,
-                'charpoly': latex(P),
-                'radius': radius,
-                'spec': latex(S)
-            })
-
+    ensure_render = set()
     for s in summary:
         for k, v in s.items():
             if k.endswith('_graphs'):
                 if len(v) > LIST_GRAPHS:
                     s[k] = v[:LIST_GRAPHS] + ['...']
+                ensure_render = ensure_render.union(s[k])
+
+    for i in range(len(output) - 1, -1, -1):
+        D = output[i]
+        if D['id'] < RENDER_GRAPHS or D['id'] in ensure_render:
+            graphs[i].plot(layout='spring', iterations=9001).save(D['fname'])
+        else:
+            output.pop(i)
 
     with open('template.html') as fp:
         html = jinja2.Template(fp.read()).render(summary=summary, list=output)
@@ -111,14 +116,14 @@ def spectral_radius(p):
     rh = 0
     while True:
         try:
-            rh = p.find_root(rh + 1e-8, p.degree(var('x')))
+            rh = p.find_root(rh + 1e-12, p.degree(var('x')))
         except RuntimeError:
             break
 
     rl = 0
     while True:
         try:
-            rl = p.find_root(-p.degree(var('x')), rl - 1e-8)
+            rl = p.find_root(-p.degree(var('x')), rl - 1e-12)
         except RuntimeError:
             break
 
