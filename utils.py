@@ -1,4 +1,5 @@
 from os import makedirs
+from time import monotonic
 
 # jinja2 docs: https://jinja.palletsprojects.com/en/3.0.x/templates/
 import jinja2
@@ -42,12 +43,14 @@ def is_symmetric(p):
     return True
 
 
-DECIMAL_PRECISION = 8
-RENDER_GRAPHS = 300
+DECIMAL_PRECISION = 6
+RENDER_GRAPHS = 200
 LIST_GRAPHS = 5
 
 
 def save(location: str, graphs: list):
+    start_time = monotonic()
+
     makedirs(location, exist_ok=True)
 
     # WARN: change 999 to actual useful value (max smaller complete graph edges) if necessary.
@@ -58,8 +61,6 @@ def save(location: str, graphs: list):
 
     for id, G in enumerate(graphs):
         P = get_charpoly(G)
-        S = solve(P, var('x'), multiplicities=True)
-        S = [(s.right_hand_side(), m) for s, m in zip(*S)]
 
         radius = round(spectral_radius(P), DECIMAL_PRECISION)
         rank = get_rank(P)
@@ -92,12 +93,14 @@ def save(location: str, graphs: list):
                 s['min_rank_graphs'].append(id)
 
         output.append({
+            '__charpoly': P,
             'id': id,
             'fname': f'{location}/graph{id:06}.png',
             'charpoly': latex(P),
             'radius': radius,
-            'spec': latex(S)
         })
+
+    print(f'[{location}] Searched ({monotonic() - start_time:.1f} seconds)')
 
     ensure_render = set()
     for s in summary:
@@ -110,14 +113,21 @@ def save(location: str, graphs: list):
     for i in range(len(output) - 1, -1, -1):
         D = output[i]
         if D['id'] < RENDER_GRAPHS or D['id'] in ensure_render:
+            S = solve(D['__charpoly'], var('x'), multiplicities=True)
+            S = [(s.right_hand_side(), m) for s, m in zip(*S)]
+            D['spec'] = latex(S)
             graphs[i].plot(layout='spring', iterations=9001).save(D['fname'])
         else:
             output.pop(i)
+
+    print(f'[{location}] Rendered ({monotonic() - start_time:.1f} seconds)')
 
     with open('template.html') as fp:
         html = jinja2.Template(fp.read()).render(summary=summary, list=output)
     with open(f'{location}.html', 'w') as fp:
         fp.write(html)
+
+    print(f'[{location}] Done ({monotonic() - start_time:.1f} seconds)')
 
 
 def spectral_radius(p):
