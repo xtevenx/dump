@@ -62,15 +62,18 @@ def save(location: str, graphs: list):
     for id, G in enumerate(graphs):
         P = get_charpoly(G)
 
-        radius = round(spectral_radius(P), DECIMAL_PRECISION)
+        max_lambda = round(max_eigenvalue(P), DECIMAL_PRECISION)
+        min_lambda = round(min_eigenvalue(P), DECIMAL_PRECISION)
         rank = get_rank(P)
 
         if not summary or summary[-1]['order'] < G.order():
             summary.append({
                 'order': G.order(),
                 'count': 1,
-                'max_radius': radius,
-                'max_radius_graphs': [id],
+                'max_lambda': max_lambda,
+                'max_lambda_graphs': [id],
+                'min_lambda': min_lambda,
+                'min_lambda_graphs': [id],
                 'min_rank': rank,
                 'min_rank_graphs': [id],
             })
@@ -80,11 +83,17 @@ def save(location: str, graphs: list):
 
             s['count'] += 1
 
-            if radius > s['max_radius']:
-                s['max_radius'] = radius
-                s['max_radius_graphs'] = []
-            if radius == s['max_radius']:
-                s['max_radius_graphs'].append(id)
+            if max_lambda > s['max_lambda']:
+                s['max_lambda'] = max_lambda
+                s['max_lambda_graphs'] = []
+            if max_lambda == s['max_lambda']:
+                s['max_lambda_graphs'].append(id)
+
+            if min_lambda < s['min_lambda']:
+                s['min_lambda'] = min_lambda
+                s['min_lambda_graphs'] = []
+            if min_lambda == s['min_lambda']:
+                s['min_lambda_graphs'].append(id)
 
             if rank < s['min_rank']:
                 s['min_rank'] = rank
@@ -97,7 +106,8 @@ def save(location: str, graphs: list):
             'id': id,
             'fname': f'{location}/graph{id:06}.png',
             'charpoly': latex(P),
-            'radius': radius,
+            'max_lambda': max_lambda,
+            'min_lambda': min_lambda,
         })
 
     print(f'[{location}] Searched ({monotonic() - start_time:.1f} seconds)')
@@ -130,19 +140,19 @@ def save(location: str, graphs: list):
     print(f'[{location}] Done ({monotonic() - start_time:.1f} seconds)')
 
 
-def spectral_radius(p):
-    rh = 0
+def max_eigenvalue(p):
+    x = 0
     while True:
         try:
-            rh = p.find_root(rh + 1e-12, p.degree(var('x')))
+            x = p.find_root(x + 1e-12, p.degree(var('x')))
         except RuntimeError:
-            break
+            return x
 
-    rl = 0
+
+def min_eigenvalue(p):
+    x = 0
     while True:
         try:
-            rl = p.find_root(-p.degree(var('x')), rl - 1e-12)
+            x = p.find_root(-p.degree(var('x')), x - 1e-12)
         except RuntimeError:
-            break
-
-    return max(-rl, rh)
+            return x

@@ -53,20 +53,23 @@
         <tr>
             <td>Order</td>
             <td>Count</td>
-            <td>Maximum Spectral Radius</td>
+            <td>Maximum Eigenvalue</td>
+            <td>Minimum Eigenvalue</td>
             <td>Minimum Rank</td>
         </tr>
         {% for item in summary %}
         <tr>
             <td>{{ item.order }}</td>
             <td>{{ item.count }}</td>
-            <td>{{ item.max_radius }} {{ item.max_radius_graphs }}</td>
+            <td>{{ item.max_lambda }} {{ item.max_lambda_graphs }}</td>
+            <td>{{ item.min_lambda }} {{ item.min_lambda_graphs }}</td>
             <td>{{ item.min_rank }} {{ item.min_rank_graphs }}</td>
         </tr>
         {% endfor %}
     </table>
 
-    NOTE: The smallest 200 graphs are rendered. Then any others referenced in the table above are rendered at the bottom.
+    NOTE: The smallest 200 graphs are rendered. Then any others referenced in
+    the table above are rendered at the bottom.
 
     <table>
         {% for item in list %}
@@ -79,8 +82,10 @@
                 Characteristic polynomial:
                 <span class="math inline">{{ item.charpoly }}</span><br />
                 Spectrum: <span class="math inline">{{ item.spec }}</span><br />
-                Spectral radius:
-                <span class="math inline">{{ item.radius if item.radius else '?' }}</span>
+                Maximum Eigenvalue:
+                <span class="math inline">{{ item.max_lambda if item.max_lambda else '?' }}</span><br />
+                Minimum Eigenvalue:
+                <span class="math inline">{{ item.min_lambda if item.min_lambda else '?' }}</span>
             </td>
         </tr>
         {% endfor %}
