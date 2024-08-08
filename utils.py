@@ -43,7 +43,7 @@ def is_symmetric(p):
     return True
 
 
-DECIMAL_PRECISION = 6
+DISPLAY_PRECISION = 4
 RENDER_GRAPHS = 200
 LIST_GRAPHS = 5
 
@@ -62,18 +62,22 @@ def save(location: str, graphs: list):
     for id, G in enumerate(graphs):
         P = get_charpoly(G)
 
-        max_lambda = round(max_eigenvalue(P), DECIMAL_PRECISION)
-        min_lambda = round(min_eigenvalue(P), DECIMAL_PRECISION)
+        max_lambda = round(max_eigenvalue(P), DISPLAY_PRECISION)
+        min_lambda = round(min_eigenvalue(P), DISPLAY_PRECISION)
         rank = get_rank(P)
 
         if not summary or summary[-1]['order'] < G.order():
             summary.append({
                 'order': G.order(),
                 'count': 1,
-                'max_lambda': max_lambda,
-                'max_lambda_graphs': [id],
-                'min_lambda': min_lambda,
-                'min_lambda_graphs': [id],
+                'max_max_lambda': max_lambda,
+                'max_max_lambda_graphs': [id],
+                'min_max_lambda': max_lambda,
+                'min_max_lambda_graphs': [id],
+                'max_min_lambda': min_lambda,
+                'max_min_lambda_graphs': [id],
+                'min_min_lambda': min_lambda,
+                'min_min_lambda_graphs': [id],
                 'min_rank': rank,
                 'min_rank_graphs': [id],
             })
@@ -83,17 +87,29 @@ def save(location: str, graphs: list):
 
             s['count'] += 1
 
-            if max_lambda > s['max_lambda']:
-                s['max_lambda'] = max_lambda
-                s['max_lambda_graphs'] = []
-            if max_lambda == s['max_lambda']:
-                s['max_lambda_graphs'].append(id)
+            if max_lambda > s['max_max_lambda']:
+                s['max_max_lambda'] = max_lambda
+                s['max_max_lambda_graphs'] = []
+            if max_lambda == s['max_max_lambda']:
+                s['max_max_lambda_graphs'].append(id)
 
-            if min_lambda < s['min_lambda']:
-                s['min_lambda'] = min_lambda
-                s['min_lambda_graphs'] = []
-            if min_lambda == s['min_lambda']:
-                s['min_lambda_graphs'].append(id)
+            if max_lambda < s['min_max_lambda']:
+                s['min_max_lambda'] = max_lambda
+                s['min_max_lambda_graphs'] = []
+            if max_lambda == s['min_max_lambda']:
+                s['min_max_lambda_graphs'].append(id)
+
+            if min_lambda > s['max_min_lambda']:
+                s['max_min_lambda'] = min_lambda
+                s['max_min_lambda_graphs'] = []
+            if min_lambda == s['max_min_lambda']:
+                s['max_min_lambda_graphs'].append(id)
+
+            if min_lambda < s['min_min_lambda']:
+                s['min_min_lambda'] = min_lambda
+                s['min_min_lambda_graphs'] = []
+            if min_lambda == s['min_min_lambda']:
+                s['min_min_lambda_graphs'].append(id)
 
             if rank < s['min_rank']:
                 s['min_rank'] = rank
@@ -140,19 +156,58 @@ def save(location: str, graphs: list):
     print(f'[{location}] Done ({monotonic() - start_time:.1f} seconds)')
 
 
+# def max_eigenvalue(p):
+#     x = 0
+#     while True:
+#         try:
+#             x = p.find_root(x + 1e-12, p.degree(var('x')))
+#         except RuntimeError:
+#             return x
+
+# def min_eigenvalue(p):
+#     x = 0
+#     while True:
+#         try:
+#             x = p.find_root(-p.degree(var('x')), x - 1e-12)
+#         except RuntimeError:
+#             return x
+
+
 def max_eigenvalue(p):
-    x = 0
-    while True:
-        try:
-            x = p.find_root(x + 1e-12, p.degree(var('x')))
-        except RuntimeError:
+    if p == 1:
+        return 0
+
+    orig = p
+
+    guesses = [0]
+    while p:
+        while True:
+            try:
+                guesses.append(p.find_root(guesses[-1] + 1e-12, p.degree(var('x'))))
+            except RuntimeError:
+                break
+        p = p.derivative(var('x'))
+
+    for x in reversed(guesses):
+        if abs(orig(x=x)) < 1e-4:
             return x
 
 
 def min_eigenvalue(p):
-    x = 0
-    while True:
-        try:
-            x = p.find_root(-p.degree(var('x')), x - 1e-12)
-        except RuntimeError:
+    if p == 1:
+        return 0
+
+    orig = p
+
+    guesses = [0]
+    while p:
+        while True:
+            try:
+                guesses.append(p.find_root(-p.degree(var('x')), guesses[-1] - 1e-12))
+            except RuntimeError:
+                break
+        p = p.derivative(var('x'))
+
+    for x in reversed(guesses):
+        if abs(orig(x=x)) < 1e-4:
             return x

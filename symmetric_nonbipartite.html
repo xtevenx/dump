@@ -53,31 +53,43 @@
         <tr>
             <td>Order</td>
             <td>Count</td>
-            <td>Maximum Eigenvalue</td>
-            <td>Minimum Eigenvalue</td>
+            <td>Maximum <span class="math inline">\lambda_1</span></td>
+            <td>Minimum <span class="math inline">\lambda_1</span></td>
+            <td>Maximum <span class="math inline">\lambda_n</span></td>
+            <td>Minimum <span class="math inline">\lambda_n</span></td>
             <td>Minimum Rank</td>
         </tr>
         
         <tr>
             <td>4</td>
             <td>23</td>
-            <td>2.376079 [12, 18, 21, 22]</td>
-            <td>-2.376079 [12, 18, 21, 22]</td>
+            <td>2.3761 [12, 18, 21, 22]</td>
+            <td>2.0 [1, 2, 4, 6, 8, '...']</td>
+            <td>-2.0 [1, 2, 4, 6, 8, '...']</td>
+            <td>-2.3761 [12, 18, 21, 22]</td>
             <td>4 [0, 1, 2, 3, 4, '...']</td>
         </tr>
         
         <tr>
             <td>5</td>
             <td>338</td>
-            <td>2.782383 [184, 228, 230, 232, 258, '...']</td>
-            <td>-2.782383 [184, 228, 230, 232, 258, '...']</td>
+            <td>2.7824 [184, 228, 230, 232, 258, '...']</td>
+            <td>2.0 [290]</td>
+            <td>-2.0 [290]</td>
+            <td>-2.7824 [184, 228, 230, 232, 258, '...']</td>
             <td>4 [23, 24, 25, 26, 27, '...']</td>
         </tr>
         
     </table>
 
     NOTE: The smallest 200 graphs are rendered. Then any others referenced in
-    the table above are rendered at the bottom.
+    the table above are rendered at the bottom. <br />
+
+    WARNING: I coded up a numerical method to check for the largest/smallest
+    eigenvalue even when the characteristic polynomial is not solvable. It
+    should not underestimate but can sometime overestimate (i.e., stated max is
+    larger or min is less than actual). It would be best to check manually to
+    ensure they are correct. <br />
 
     <table>
         
@@ -91,9 +103,9 @@
                 <span class="math inline">x^{4} - 5 \, x^{2} + 1</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.188901</span><br />
+                <span class="math inline">2.1889</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.188901</span>
+                <span class="math inline">-2.1889</span>
             </td>
         </tr>
         
@@ -139,9 +151,9 @@
                 <span class="math inline">x^{4} - 5 \, x^{2} + 1</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.188901</span><br />
+                <span class="math inline">2.1889</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.188901</span>
+                <span class="math inline">-2.1889</span>
             </td>
         </tr>
         
@@ -171,9 +183,9 @@
                 <span class="math inline">x^{4} - 5 \, x^{2} + 1</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.188901</span><br />
+                <span class="math inline">2.1889</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.188901</span>
+                <span class="math inline">-2.1889</span>
             </td>
         </tr>
         
@@ -203,9 +215,9 @@
                 <span class="math inline">x^{4} - 5 \, x^{2} + 1</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.188901</span><br />
+                <span class="math inline">2.1889</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.188901</span>
+                <span class="math inline">-2.1889</span>
             </td>
         </tr>
         
@@ -235,9 +247,9 @@
                 <span class="math inline">x^{4} - 5 \, x^{2} + 1</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.188901</span><br />
+                <span class="math inline">2.1889</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.188901</span>
+                <span class="math inline">-2.1889</span>
             </td>
         </tr>
         
@@ -267,9 +279,9 @@
                 <span class="math inline">x^{4} - 5 \, x^{2} + 1</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.188901</span><br />
+                <span class="math inline">2.1889</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.188901</span>
+                <span class="math inline">-2.1889</span>
             </td>
         </tr>
         
@@ -283,9 +295,9 @@
                 <span class="math inline">x^{4} - 6 \, x^{2} + 2</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{7} + 3}, 1\right), \left(\sqrt{\sqrt{7} + 3}, 1\right), \left(-\sqrt{-\sqrt{7} + 3}, 1\right), \left(\sqrt{-\sqrt{7} + 3}, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.376079</span><br />
+                <span class="math inline">2.3761</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.376079</span>
+                <span class="math inline">-2.3761</span>
             </td>
         </tr>
         
@@ -299,9 +311,9 @@
                 <span class="math inline">x^{4} - 6 \, x^{2} + 5</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -315,9 +327,9 @@
                 <span class="math inline">x^{4} - 6 \, x^{2} + 5</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -331,9 +343,9 @@
                 <span class="math inline">x^{4} - 6 \, x^{2} + 5</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -347,9 +359,9 @@
                 <span class="math inline">x^{4} - 5 \, x^{2} + 1</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.188901</span><br />
+                <span class="math inline">2.1889</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.188901</span>
+                <span class="math inline">-2.1889</span>
             </td>
         </tr>
         
@@ -363,9 +375,9 @@
                 <span class="math inline">x^{4} - 5 \, x^{2} + 1</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{5}{2}}, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.188901</span><br />
+                <span class="math inline">2.1889</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.188901</span>
+                <span class="math inline">-2.1889</span>
             </td>
         </tr>
         
@@ -379,9 +391,9 @@
                 <span class="math inline">x^{4} - 6 \, x^{2} + 2</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{7} + 3}, 1\right), \left(\sqrt{\sqrt{7} + 3}, 1\right), \left(-\sqrt{-\sqrt{7} + 3}, 1\right), \left(\sqrt{-\sqrt{7} + 3}, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.376079</span><br />
+                <span class="math inline">2.3761</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.376079</span>
+                <span class="math inline">-2.3761</span>
             </td>
         </tr>
         
@@ -395,9 +407,9 @@
                 <span class="math inline">x^{4} - 6 \, x^{2} + 5</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -411,9 +423,9 @@
                 <span class="math inline">x^{4} - 6 \, x^{2} + 5</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -427,9 +439,9 @@
                 <span class="math inline">x^{4} - 6 \, x^{2} + 2</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{7} + 3}, 1\right), \left(\sqrt{\sqrt{7} + 3}, 1\right), \left(-\sqrt{-\sqrt{7} + 3}, 1\right), \left(\sqrt{-\sqrt{7} + 3}, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.376079</span><br />
+                <span class="math inline">2.3761</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.376079</span>
+                <span class="math inline">-2.3761</span>
             </td>
         </tr>
         
@@ -443,9 +455,9 @@
                 <span class="math inline">x^{4} - 6 \, x^{2} + 2</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{7} + 3}, 1\right), \left(\sqrt{\sqrt{7} + 3}, 1\right), \left(-\sqrt{-\sqrt{7} + 3}, 1\right), \left(\sqrt{-\sqrt{7} + 3}, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.376079</span><br />
+                <span class="math inline">2.3761</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.376079</span>
+                <span class="math inline">-2.3761</span>
             </td>
         </tr>
         
@@ -459,9 +471,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -475,9 +487,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -491,9 +503,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -507,9 +519,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -523,9 +535,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -539,9 +551,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -555,9 +567,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -571,9 +583,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 9 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.302776</span><br />
+                <span class="math inline">2.3028</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.302776</span>
+                <span class="math inline">-2.3028</span>
             </td>
         </tr>
         
@@ -587,9 +599,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -603,9 +615,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-1, 1\right), \left(1, 1\right), \left(-\sqrt{6}, 1\right), \left(\sqrt{6}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.44949</span><br />
+                <span class="math inline">2.4495</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.44949</span>
+                <span class="math inline">-2.4495</span>
             </td>
         </tr>
         
@@ -619,9 +631,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -635,9 +647,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -651,9 +663,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -667,9 +679,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -683,9 +695,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -699,9 +711,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-1, 1\right), \left(1, 1\right), \left(-\sqrt{6}, 1\right), \left(\sqrt{6}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.44949</span><br />
+                <span class="math inline">2.4495</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.44949</span>
+                <span class="math inline">-2.4495</span>
             </td>
         </tr>
         
@@ -715,9 +727,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -731,9 +743,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -747,9 +759,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 9 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.302776</span><br />
+                <span class="math inline">2.3028</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.302776</span>
+                <span class="math inline">-2.3028</span>
             </td>
         </tr>
         
@@ -763,9 +775,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -779,9 +791,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -795,9 +807,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-1, 1\right), \left(1, 1\right), \left(-\sqrt{6}, 1\right), \left(\sqrt{6}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.44949</span><br />
+                <span class="math inline">2.4495</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.44949</span>
+                <span class="math inline">-2.4495</span>
             </td>
         </tr>
         
@@ -811,9 +823,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -827,9 +839,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -843,9 +855,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -859,9 +871,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -875,9 +887,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -891,9 +903,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -907,9 +919,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -923,9 +935,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -939,9 +951,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -955,9 +967,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -971,9 +983,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -987,9 +999,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1003,9 +1015,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1019,9 +1031,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1035,9 +1047,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1051,9 +1063,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1067,9 +1079,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1083,9 +1095,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1099,9 +1111,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1115,9 +1127,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -1131,9 +1143,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -1147,9 +1159,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -1163,9 +1175,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -1179,9 +1191,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -1195,9 +1207,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1211,9 +1223,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1227,9 +1239,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -1243,9 +1255,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1259,9 +1271,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-1, 1\right), \left(1, 1\right), \left(-\sqrt{6}, 1\right), \left(\sqrt{6}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.44949</span><br />
+                <span class="math inline">2.4495</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.44949</span>
+                <span class="math inline">-2.4495</span>
             </td>
         </tr>
         
@@ -1275,9 +1287,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1291,9 +1303,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1307,9 +1319,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1323,9 +1335,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1339,9 +1351,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1355,9 +1367,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 9 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.302776</span><br />
+                <span class="math inline">2.3028</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.302776</span>
+                <span class="math inline">-2.3028</span>
             </td>
         </tr>
         
@@ -1371,9 +1383,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1387,9 +1399,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1403,9 +1415,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1419,9 +1431,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1435,9 +1447,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1451,9 +1463,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1467,9 +1479,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1483,9 +1495,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1499,9 +1511,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1515,9 +1527,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-1, 1\right), \left(1, 1\right), \left(-\sqrt{6}, 1\right), \left(\sqrt{6}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.44949</span><br />
+                <span class="math inline">2.4495</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.44949</span>
+                <span class="math inline">-2.4495</span>
             </td>
         </tr>
         
@@ -1531,9 +1543,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1547,9 +1559,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1563,9 +1575,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 9 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.302776</span><br />
+                <span class="math inline">2.3028</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.302776</span>
+                <span class="math inline">-2.3028</span>
             </td>
         </tr>
         
@@ -1579,9 +1591,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1595,9 +1607,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1611,9 +1623,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1627,9 +1639,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1643,9 +1655,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1659,9 +1671,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1675,9 +1687,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1691,9 +1703,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1707,9 +1719,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1723,9 +1735,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1739,9 +1751,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1755,9 +1767,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1771,9 +1783,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -1787,9 +1799,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1803,9 +1815,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -1819,9 +1831,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 4 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.524338</span><br />
+                <span class="math inline">2.5243</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.524338</span>
+                <span class="math inline">-2.5243</span>
             </td>
         </tr>
         
@@ -1835,9 +1847,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -1851,9 +1863,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -1867,9 +1879,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -1883,9 +1895,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 4 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.524338</span><br />
+                <span class="math inline">2.5243</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.524338</span>
+                <span class="math inline">-2.5243</span>
             </td>
         </tr>
         
@@ -1899,9 +1911,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -1915,9 +1927,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -1931,9 +1943,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 7 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.406509</span><br />
+                <span class="math inline">2.4065</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.406509</span>
+                <span class="math inline">-2.4065</span>
             </td>
         </tr>
         
@@ -1947,9 +1959,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 7 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.406509</span><br />
+                <span class="math inline">2.4065</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.406509</span>
+                <span class="math inline">-2.4065</span>
             </td>
         </tr>
         
@@ -1963,9 +1975,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 4 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.524338</span><br />
+                <span class="math inline">2.5243</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.524338</span>
+                <span class="math inline">-2.5243</span>
             </td>
         </tr>
         
@@ -1979,9 +1991,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 7 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.406509</span><br />
+                <span class="math inline">2.4065</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.406509</span>
+                <span class="math inline">-2.4065</span>
             </td>
         </tr>
         
@@ -1995,9 +2007,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2011,9 +2023,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 7 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.406509</span><br />
+                <span class="math inline">2.4065</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.406509</span>
+                <span class="math inline">-2.4065</span>
             </td>
         </tr>
         
@@ -2027,9 +2039,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 7 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.406509</span><br />
+                <span class="math inline">2.4065</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.406509</span>
+                <span class="math inline">-2.4065</span>
             </td>
         </tr>
         
@@ -2043,9 +2055,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2059,9 +2071,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 7 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.406509</span><br />
+                <span class="math inline">2.4065</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.406509</span>
+                <span class="math inline">-2.4065</span>
             </td>
         </tr>
         
@@ -2075,9 +2087,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2091,9 +2103,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2107,9 +2119,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2123,9 +2135,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2139,9 +2151,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2155,9 +2167,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2171,9 +2183,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -2187,9 +2199,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-1, 1\right), \left(1, 1\right), \left(-\sqrt{6}, 1\right), \left(\sqrt{6}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.44949</span><br />
+                <span class="math inline">2.4495</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.44949</span>
+                <span class="math inline">-2.4495</span>
             </td>
         </tr>
         
@@ -2203,9 +2215,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 4 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.524338</span><br />
+                <span class="math inline">2.5243</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.524338</span>
+                <span class="math inline">-2.5243</span>
             </td>
         </tr>
         
@@ -2219,9 +2231,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2235,9 +2247,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 4 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.524338</span><br />
+                <span class="math inline">2.5243</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.524338</span>
+                <span class="math inline">-2.5243</span>
             </td>
         </tr>
         
@@ -2251,9 +2263,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 4 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.524338</span><br />
+                <span class="math inline">2.5243</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.524338</span>
+                <span class="math inline">-2.5243</span>
             </td>
         </tr>
         
@@ -2267,9 +2279,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -2283,9 +2295,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -2299,9 +2311,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -2315,9 +2327,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -2331,9 +2343,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -2347,9 +2359,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -2363,9 +2375,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -2379,9 +2391,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -2395,9 +2407,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -2411,9 +2423,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -2427,9 +2439,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 9 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{13} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.302776</span><br />
+                <span class="math inline">2.3028</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.302776</span>
+                <span class="math inline">-2.3028</span>
             </td>
         </tr>
         
@@ -2443,9 +2455,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -2459,9 +2471,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-1, 1\right), \left(1, 1\right), \left(-\sqrt{6}, 1\right), \left(\sqrt{6}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.44949</span><br />
+                <span class="math inline">2.4495</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.44949</span>
+                <span class="math inline">-2.4495</span>
             </td>
         </tr>
         
@@ -2475,9 +2487,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -2491,9 +2503,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -2507,9 +2519,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-1, 1\right), \left(1, 1\right), \left(-\sqrt{6}, 1\right), \left(\sqrt{6}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.44949</span><br />
+                <span class="math inline">2.4495</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.44949</span>
+                <span class="math inline">-2.4495</span>
             </td>
         </tr>
         
@@ -2523,9 +2535,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 3 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 3}, 1\right), \left(\sqrt{\sqrt{6} + 3}, 1\right), \left(-\sqrt{-\sqrt{6} + 3}, 1\right), \left(\sqrt{-\sqrt{6} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.334414</span><br />
+                <span class="math inline">2.3344</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.334414</span>
+                <span class="math inline">-2.3344</span>
             </td>
         </tr>
         
@@ -2539,9 +2551,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2555,9 +2567,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2571,9 +2583,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -2587,9 +2599,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 6 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{3} + 3}, 1\right), \left(\sqrt{\sqrt{3} + 3}, 1\right), \left(-\sqrt{-\sqrt{3} + 3}, 1\right), \left(\sqrt{-\sqrt{3} + 3}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.175328</span><br />
+                <span class="math inline">2.1753</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.175328</span>
+                <span class="math inline">-2.1753</span>
             </td>
         </tr>
         
@@ -2603,9 +2615,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 4 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.524338</span><br />
+                <span class="math inline">2.5243</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.524338</span>
+                <span class="math inline">-2.5243</span>
             </td>
         </tr>
         
@@ -2619,9 +2631,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2635,9 +2647,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2651,9 +2663,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 4}, 1\right), \left(\sqrt{\sqrt{6} + 4}, 1\right), \left(-\sqrt{-\sqrt{6} + 4}, 1\right), \left(\sqrt{-\sqrt{6} + 4}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.539585</span><br />
+                <span class="math inline">2.5396</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.539585</span>
+                <span class="math inline">-2.5396</span>
             </td>
         </tr>
         
@@ -2667,9 +2679,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 7 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.406509</span><br />
+                <span class="math inline">2.4065</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.406509</span>
+                <span class="math inline">-2.4065</span>
             </td>
         </tr>
         
@@ -2683,9 +2695,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2699,9 +2711,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2715,9 +2727,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2731,9 +2743,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2747,9 +2759,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2763,9 +2775,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2779,9 +2791,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 7 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.406509</span><br />
+                <span class="math inline">2.4065</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.406509</span>
+                <span class="math inline">-2.4065</span>
             </td>
         </tr>
         
@@ -2795,9 +2807,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 4}, 1\right), \left(\sqrt{\sqrt{6} + 4}, 1\right), \left(-\sqrt{-\sqrt{6} + 4}, 1\right), \left(\sqrt{-\sqrt{6} + 4}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.539585</span><br />
+                <span class="math inline">2.5396</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.539585</span>
+                <span class="math inline">-2.5396</span>
             </td>
         </tr>
         
@@ -2811,9 +2823,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 7 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{7}, 1\right), \left(\sqrt{7}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.645751</span><br />
+                <span class="math inline">2.6458</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.645751</span>
+                <span class="math inline">-2.6458</span>
             </td>
         </tr>
         
@@ -2827,9 +2839,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2843,9 +2855,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 4}, 1\right), \left(\sqrt{\sqrt{6} + 4}, 1\right), \left(-\sqrt{-\sqrt{6} + 4}, 1\right), \left(\sqrt{-\sqrt{6} + 4}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.539585</span><br />
+                <span class="math inline">2.5396</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.539585</span>
+                <span class="math inline">-2.5396</span>
             </td>
         </tr>
         
@@ -2859,9 +2871,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2875,9 +2887,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 4}, 1\right), \left(\sqrt{\sqrt{6} + 4}, 1\right), \left(-\sqrt{-\sqrt{6} + 4}, 1\right), \left(\sqrt{-\sqrt{6} + 4}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.539585</span><br />
+                <span class="math inline">2.5396</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.539585</span>
+                <span class="math inline">-2.5396</span>
             </td>
         </tr>
         
@@ -2891,9 +2903,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 4 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.524338</span><br />
+                <span class="math inline">2.5243</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.524338</span>
+                <span class="math inline">-2.5243</span>
             </td>
         </tr>
         
@@ -2907,9 +2919,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2923,9 +2935,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 7 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{7}, 1\right), \left(\sqrt{7}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.645751</span><br />
+                <span class="math inline">2.6458</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.645751</span>
+                <span class="math inline">-2.6458</span>
             </td>
         </tr>
         
@@ -2939,9 +2951,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2955,9 +2967,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 4}, 1\right), \left(\sqrt{\sqrt{6} + 4}, 1\right), \left(-\sqrt{-\sqrt{6} + 4}, 1\right), \left(\sqrt{-\sqrt{6} + 4}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.539585</span><br />
+                <span class="math inline">2.5396</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.539585</span>
+                <span class="math inline">-2.5396</span>
             </td>
         </tr>
         
@@ -2971,9 +2983,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -2987,9 +2999,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -3003,9 +3015,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{6} + 4}, 1\right), \left(\sqrt{\sqrt{6} + 4}, 1\right), \left(-\sqrt{-\sqrt{6} + 4}, 1\right), \left(\sqrt{-\sqrt{6} + 4}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.539585</span><br />
+                <span class="math inline">2.5396</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.539585</span>
+                <span class="math inline">-2.5396</span>
             </td>
         </tr>
         
@@ -3019,9 +3031,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 4 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.524338</span><br />
+                <span class="math inline">2.5243</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.524338</span>
+                <span class="math inline">-2.5243</span>
             </td>
         </tr>
         
@@ -3035,9 +3047,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 2 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{14} + 4}, 1\right), \left(\sqrt{\sqrt{14} + 4}, 1\right), \left(-\sqrt{-\sqrt{14} + 4}, 1\right), \left(\sqrt{-\sqrt{14} + 4}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.782383</span><br />
+                <span class="math inline">2.7824</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.782383</span>
+                <span class="math inline">-2.7824</span>
             </td>
         </tr>
         
@@ -3051,9 +3063,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -3067,9 +3079,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 4 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.524338</span><br />
+                <span class="math inline">2.5243</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.524338</span>
+                <span class="math inline">-2.5243</span>
             </td>
         </tr>
         
@@ -3083,9 +3095,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 4 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.524338</span><br />
+                <span class="math inline">2.5243</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.524338</span>
+                <span class="math inline">-2.5243</span>
             </td>
         </tr>
         
@@ -3099,9 +3111,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 7 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.406509</span><br />
+                <span class="math inline">2.4065</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.406509</span>
+                <span class="math inline">-2.4065</span>
             </td>
         </tr>
         
@@ -3115,9 +3127,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 8 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2 \, \sqrt{2} + 4}, 1\right), \left(\sqrt{2 \, \sqrt{2} + 4}, 1\right), \left(-\sqrt{-2 \, \sqrt{2} + 4}, 1\right), \left(\sqrt{-2 \, \sqrt{2} + 4}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.613126</span><br />
+                <span class="math inline">2.6131</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.613126</span>
+                <span class="math inline">-2.6131</span>
             </td>
         </tr>
         
@@ -3131,9 +3143,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 4 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{33} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.524338</span><br />
+                <span class="math inline">2.5243</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.524338</span>
+                <span class="math inline">-2.5243</span>
             </td>
         </tr>
         
@@ -3147,9 +3159,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -3163,9 +3175,9 @@
                 <span class="math inline">x^{5} - 6 \, x^{3} + 5 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(-1, 1\right), \left(1, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -3179,9 +3191,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 11 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{5} + 4}, 1\right), \left(\sqrt{\sqrt{5} + 4}, 1\right), \left(-\sqrt{-\sqrt{5} + 4}, 1\right), \left(\sqrt{-\sqrt{5} + 4}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.497212</span><br />
+                <span class="math inline">2.4972</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.497212</span>
+                <span class="math inline">-2.4972</span>
             </td>
         </tr>
         
@@ -3195,9 +3207,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 14 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{2} + 4}, 1\right), \left(\sqrt{\sqrt{2} + 4}, 1\right), \left(-\sqrt{-\sqrt{2} + 4}, 1\right), \left(\sqrt{-\sqrt{2} + 4}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.326846</span><br />
+                <span class="math inline">2.3268</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.326846</span>
+                <span class="math inline">-2.3268</span>
             </td>
         </tr>
         
@@ -3211,9 +3223,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -3227,9 +3239,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 11 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{5} + 4}, 1\right), \left(\sqrt{\sqrt{5} + 4}, 1\right), \left(-\sqrt{-\sqrt{5} + 4}, 1\right), \left(\sqrt{-\sqrt{5} + 4}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.497212</span><br />
+                <span class="math inline">2.4972</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.497212</span>
+                <span class="math inline">-2.4972</span>
             </td>
         </tr>
         
@@ -3243,9 +3255,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 11 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{5} + 4}, 1\right), \left(\sqrt{\sqrt{5} + 4}, 1\right), \left(-\sqrt{-\sqrt{5} + 4}, 1\right), \left(\sqrt{-\sqrt{5} + 4}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.497212</span><br />
+                <span class="math inline">2.4972</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.497212</span>
+                <span class="math inline">-2.4972</span>
             </td>
         </tr>
         
@@ -3259,9 +3271,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 7 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(-\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(\sqrt{-\frac{1}{2} \, \sqrt{21} + \frac{7}{2}}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.406509</span><br />
+                <span class="math inline">2.4065</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.406509</span>
+                <span class="math inline">-2.4065</span>
             </td>
         </tr>
         
@@ -3275,9 +3287,9 @@
                 <span class="math inline">x^{5} - 7 \, x^{3} + 10 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 1\right), \left(\sqrt{2}, 1\right), \left(-\sqrt{5}, 1\right), \left(\sqrt{5}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.236068</span><br />
+                <span class="math inline">2.2361</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.236068</span>
+                <span class="math inline">-2.2361</span>
             </td>
         </tr>
         
@@ -3291,9 +3303,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 2 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{14} + 4}, 1\right), \left(\sqrt{\sqrt{14} + 4}, 1\right), \left(-\sqrt{-\sqrt{14} + 4}, 1\right), \left(\sqrt{-\sqrt{14} + 4}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.782383</span><br />
+                <span class="math inline">2.7824</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.782383</span>
+                <span class="math inline">-2.7824</span>
             </td>
         </tr>
         
@@ -3307,9 +3319,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 2 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{14} + 4}, 1\right), \left(\sqrt{\sqrt{14} + 4}, 1\right), \left(-\sqrt{-\sqrt{14} + 4}, 1\right), \left(\sqrt{-\sqrt{14} + 4}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.782383</span><br />
+                <span class="math inline">2.7824</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.782383</span>
+                <span class="math inline">-2.7824</span>
             </td>
         </tr>
         
@@ -3323,9 +3335,9 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 2 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{14} + 4}, 1\right), \left(\sqrt{\sqrt{14} + 4}, 1\right), \left(-\sqrt{-\sqrt{14} + 4}, 1\right), \left(\sqrt{-\sqrt{14} + 4}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.782383</span><br />
+                <span class="math inline">2.7824</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.782383</span>
+                <span class="math inline">-2.7824</span>
             </td>
         </tr>
         
@@ -3339,9 +3351,25 @@
                 <span class="math inline">x^{5} - 8 \, x^{3} + 2 \, x</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{\sqrt{14} + 4}, 1\right), \left(\sqrt{\sqrt{14} + 4}, 1\right), \left(-\sqrt{-\sqrt{14} + 4}, 1\right), \left(\sqrt{-\sqrt{14} + 4}, 1\right), \left(0, 1\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">2.782383</span><br />
+                <span class="math inline">2.7824</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-2.782383</span>
+                <span class="math inline">-2.7824</span>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center">
+                <img src="symmetric_nonbipartite/graph000290.png" loading="lazy" />
+            </td>
+            <td style="vertical-align: middle">
+                <h4>Graph #290</h4>
+                Characteristic polynomial:
+                <span class="math inline">x^{5} - 8 \, x^{3} + 16 \, x</span><br />
+                Spectrum: <span class="math inline">\left[\left(-2, 2\right), \left(2, 2\right), \left(0, 1\right)\right]</span><br />
+                Maximum Eigenvalue:
+                <span class="math inline">2.0</span><br />
+                Minimum Eigenvalue:
+                <span class="math inline">-2.0</span>
             </td>
         </tr>
         

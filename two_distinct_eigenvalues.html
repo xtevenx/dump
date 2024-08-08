@@ -53,8 +53,10 @@
         <tr>
             <td>Order</td>
             <td>Count</td>
-            <td>Maximum Eigenvalue</td>
-            <td>Minimum Eigenvalue</td>
+            <td>Maximum <span class="math inline">\lambda_1</span></td>
+            <td>Minimum <span class="math inline">\lambda_1</span></td>
+            <td>Maximum <span class="math inline">\lambda_n</span></td>
+            <td>Minimum <span class="math inline">\lambda_n</span></td>
             <td>Minimum Rank</td>
         </tr>
         
@@ -62,6 +64,8 @@
             <td>2</td>
             <td>2</td>
             <td>1.0 [0, 1]</td>
+            <td>1.0 [0, 1]</td>
+            <td>-1.0 [0, 1]</td>
             <td>-1.0 [0, 1]</td>
             <td>2 [0, 1]</td>
         </tr>
@@ -70,6 +74,8 @@
             <td>3</td>
             <td>4</td>
             <td>2.0 [3, 4, 5]</td>
+            <td>1.0 [2]</td>
+            <td>-1.0 [3, 4, 5]</td>
             <td>-2.0 [2]</td>
             <td>3 [2, 3, 4, 5]</td>
         </tr>
@@ -78,7 +84,9 @@
             <td>4</td>
             <td>5</td>
             <td>3.0 [7, 8, 9, 10]</td>
-            <td>-1.414214 [6]</td>
+            <td>1.4142 [6]</td>
+            <td>-1.0 [7, 8, 9, 10]</td>
+            <td>-1.4142 [6]</td>
             <td>4 [6, 7, 8, 9, 10]</td>
         </tr>
         
@@ -86,14 +94,22 @@
             <td>5</td>
             <td>5</td>
             <td>4.0 [11, 12, 13, 14, 15]</td>
-            <td>-1.00002 [11, 12, 13, 14, 15]</td>
+            <td>4.0 [11, 12, 13, 14, 15]</td>
+            <td>-1.0 [11, 12, 13, 14, 15]</td>
+            <td>-1.0 [11, 12, 13, 14, 15]</td>
             <td>5 [11, 12, 13, 14, 15]</td>
         </tr>
         
     </table>
 
     NOTE: The smallest 200 graphs are rendered. Then any others referenced in
-    the table above are rendered at the bottom.
+    the table above are rendered at the bottom. <br />
+
+    WARNING: I coded up a numerical method to check for the largest/smallest
+    eigenvalue even when the characteristic polynomial is not solvable. It
+    should not underestimate but can sometime overestimate (i.e., stated max is
+    larger or min is less than actual). It would be best to check manually to
+    ensure they are correct. <br />
 
     <table>
         
@@ -203,9 +219,9 @@
                 <span class="math inline">x^{4} - 4 \, x^{2} + 4</span><br />
                 Spectrum: <span class="math inline">\left[\left(-\sqrt{2}, 2\right), \left(\sqrt{2}, 2\right)\right]</span><br />
                 Maximum Eigenvalue:
-                <span class="math inline">1.414214</span><br />
+                <span class="math inline">1.4142</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-1.414214</span>
+                <span class="math inline">-1.4142</span>
             </td>
         </tr>
         
@@ -221,7 +237,7 @@
                 Maximum Eigenvalue:
                 <span class="math inline">3.0</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-1.000005</span>
+                <span class="math inline">-1.0</span>
             </td>
         </tr>
         
@@ -237,7 +253,7 @@
                 Maximum Eigenvalue:
                 <span class="math inline">3.0</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-1.000005</span>
+                <span class="math inline">-1.0</span>
             </td>
         </tr>
         
@@ -253,7 +269,7 @@
                 Maximum Eigenvalue:
                 <span class="math inline">3.0</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-1.000005</span>
+                <span class="math inline">-1.0</span>
             </td>
         </tr>
         
@@ -269,7 +285,7 @@
                 Maximum Eigenvalue:
                 <span class="math inline">3.0</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-1.000005</span>
+                <span class="math inline">-1.0</span>
             </td>
         </tr>
         
@@ -285,7 +301,7 @@
                 Maximum Eigenvalue:
                 <span class="math inline">4.0</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-1.00002</span>
+                <span class="math inline">-1.0</span>
             </td>
         </tr>
         
@@ -301,7 +317,7 @@
                 Maximum Eigenvalue:
                 <span class="math inline">4.0</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-1.00002</span>
+                <span class="math inline">-1.0</span>
             </td>
         </tr>
         
@@ -317,7 +333,7 @@
                 Maximum Eigenvalue:
                 <span class="math inline">4.0</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-1.00002</span>
+                <span class="math inline">-1.0</span>
             </td>
         </tr>
         
@@ -333,7 +349,7 @@
                 Maximum Eigenvalue:
                 <span class="math inline">4.0</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-1.00002</span>
+                <span class="math inline">-1.0</span>
             </td>
         </tr>
         
@@ -349,7 +365,7 @@
                 Maximum Eigenvalue:
                 <span class="math inline">4.0</span><br />
                 Minimum Eigenvalue:
-                <span class="math inline">-1.00002</span>
+                <span class="math inline">-1.0</span>
             </td>
         </tr>
         

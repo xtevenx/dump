@@ -53,23 +53,33 @@
         <tr>
             <td>Order</td>
             <td>Count</td>
-            <td>Maximum Eigenvalue</td>
-            <td>Minimum Eigenvalue</td>
+            <td>Maximum <span class="math inline">\lambda_1</span></td>
+            <td>Minimum <span class="math inline">\lambda_1</span></td>
+            <td>Maximum <span class="math inline">\lambda_n</span></td>
+            <td>Minimum <span class="math inline">\lambda_n</span></td>
             <td>Minimum Rank</td>
         </tr>
         {% for item in summary %}
         <tr>
             <td>{{ item.order }}</td>
             <td>{{ item.count }}</td>
-            <td>{{ item.max_lambda }} {{ item.max_lambda_graphs }}</td>
-            <td>{{ item.min_lambda }} {{ item.min_lambda_graphs }}</td>
+            <td>{{ item.max_max_lambda }} {{ item.max_max_lambda_graphs }}</td>
+            <td>{{ item.min_max_lambda }} {{ item.min_max_lambda_graphs }}</td>
+            <td>{{ item.max_min_lambda }} {{ item.max_min_lambda_graphs }}</td>
+            <td>{{ item.min_min_lambda }} {{ item.min_min_lambda_graphs }}</td>
             <td>{{ item.min_rank }} {{ item.min_rank_graphs }}</td>
         </tr>
         {% endfor %}
     </table>
 
     NOTE: The smallest 200 graphs are rendered. Then any others referenced in
-    the table above are rendered at the bottom.
+    the table above are rendered at the bottom. <br />
+
+    WARNING: I coded up a numerical method to check for the largest/smallest
+    eigenvalue even when the characteristic polynomial is not solvable. It
+    should not underestimate but can sometime overestimate (i.e., stated max is
+    larger or min is less than actual). It would be best to check manually to
+    ensure they are correct. <br />
 
     <table>
         {% for item in list %}
