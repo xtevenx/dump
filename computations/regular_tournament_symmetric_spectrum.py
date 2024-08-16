@@ -14,7 +14,7 @@ with open('rt11.txt') as fp:
 
 for line in data.strip().split('\n'):
 
-    H = matrix(11, 11)
+    H = matrix(11)
 
     r = 0
     c = 1
@@ -34,6 +34,8 @@ for line in data.strip().split('\n'):
 
     H = w * H + conjugate(w) * H.transpose()
     P = H.charpoly()
+
+    # test if symmetric spectrum
 
     for i, c in enumerate(P.coefficients(sparse=False)):
         if i % 2 == 0 and c != 0:
