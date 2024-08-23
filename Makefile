@@ -1,4 +1,5 @@
 all: integer_eigenvalues.html
+all: proof.html
 all: small_tournaments.html
 all: small_tournaments_mixed.html
 all: symmetric_nonbipartite.html
@@ -6,6 +7,9 @@ all: two_distinct_eigenvalues.html
 
 integer_eigenvalues.html: integer_eigenvalues.py template.html
 	python integer_eigenvalues.py
+
+proof.html: proof.py template.html
+	python proof.py
 
 small_tournaments.html: small_tournaments.py template.html
 	python small_tournaments.py
@@ -22,6 +26,7 @@ two_distinct_eigenvalues.html: two_distinct_eigenvalues.py template.html
 clean:
 	rm -r __pycache__ || true
 	rm -r integer_eigenvalues/ || true
+	rm -r proof/ || true
 	rm -r small_tournaments/ || true
 	rm -r small_tournaments_mixed/ || true
 	rm -r symmetric_nonbipartite/ || true
