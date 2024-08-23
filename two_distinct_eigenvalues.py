@@ -8,16 +8,22 @@ if __name__ == '__main__':
 
     data = []
 
-    for G in digraphs(5, augment='vertices'):
+    for n in range(6):
 
-        if not G.is_connected():
-            continue
+        with open(f'data/orient{n+1}.d6') as fp:
+            s = fp.read()
 
-        M = G.adjacency_matrix() * E(6)
-        M = M + conjugate(M.transpose())
-        P = SR(M.charpoly())
+        for line in s.strip().split('\n'):
+            G = DiGraph(line.lstrip('&'), format='dig6')
 
-        if count_distinct_roots(P) == 2:
-            data.append(G)
+            if not G.is_connected():
+                continue
+
+            M = G.adjacency_matrix() * E(6)
+            M = M + conjugate(M.transpose())
+            P = SR(M.charpoly())
+
+            if count_distinct_roots(P) == 2:
+                data.append(G)
 
     save(Path(__file__).stem, data)
