@@ -3,6 +3,7 @@ all: proof.html
 all: small_tournaments.html
 all: small_tournaments_mixed.html
 all: symmetric_nonbipartite.html
+all: symmetric_nonbipartite_mixed.html
 all: two_distinct_eigenvalues.html
 
 integer_eigenvalues.html: integer_eigenvalues.py template.html
@@ -20,6 +21,9 @@ small_tournaments_mixed.html: small_tournaments_mixed.py template.html
 symmetric_nonbipartite.html: symmetric_nonbipartite.py template.html
 	python symmetric_nonbipartite.py
 
+symmetric_nonbipartite_mixed.html: symmetric_nonbipartite_mixed.py template.html
+	python symmetric_nonbipartite_mixed.py
+
 two_distinct_eigenvalues.html: two_distinct_eigenvalues.py template.html
 	python two_distinct_eigenvalues.py
 
@@ -30,5 +34,6 @@ clean:
 	rm -r small_tournaments/ || true
 	rm -r small_tournaments_mixed/ || true
 	rm -r symmetric_nonbipartite/ || true
+	rm -r symmetric_nonbipartite_mixed/ || true
 	rm -r two_distinct_eigenvalues/ || true
 	touch template.html

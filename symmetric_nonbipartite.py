@@ -8,16 +8,22 @@ if __name__ == '__main__':
 
     data = []
 
-    for G in digraphs(5, augment='vertices'):
+    for n in range(6):
 
-        if not G.is_connected() or G.is_bipartite():
-            continue
+        with open(f'data/orient{n+1}.d6') as fp:
+            s = fp.read()
 
-        M = G.adjacency_matrix() * E(6)
-        M = M + conjugate(M.transpose())
-        P = SR(M.charpoly())
+        for line in s.strip().split('\n'):
+            G = DiGraph(line.lstrip('&'), format='dig6')
 
-        if is_symmetric(P):
-            data.append(G)
+            if not G.is_connected() or G.is_bipartite():
+                continue
+
+            M = G.adjacency_matrix() * E(6)
+            M = M + conjugate(M.transpose())
+            P = SR(M.charpoly())
+
+            if is_symmetric(P):
+                data.append(G)
 
     save(Path(__file__).stem, data)
